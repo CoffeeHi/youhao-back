@@ -1,3 +1,3 @@
-# youhao-back
-##毕设后端，应用了SSM框架，Redis,Mongodb,Mysql
+# 游好旅行-一个关于自助旅行和社交结合的构想
+##我的毕设后端，应用了SSM框架，Redis,Mongodb,Mysql
 ##还在进行中。。。
