@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <import resource="classpath:/spring/spring-sys-properties.xml"/>
+    <import resource="classpath:/spring/spring-datasource.xml"/>
+    <import resource="classpath:/spring/spring-mybatis.xml"/>
+    <import resource="classpath:/spring/spring-data-mongodb.xml"/>
+    <import resource="classpath:/spring/spring-data-redis.xml"/>
+    <import resource="classpath:/spring/spring-mvc-login.xml"/>
+    <import resource="classpath:/spring/spring-mvc-admin.xml"/>
+    <import resource="classpath:/spring/spring-mvc-portal.xml"/>
+    <context:component-scan base-package="com.chenx.dao"/>
+    <context:component-scan base-package="com.chenx.service"/>
+</beans>

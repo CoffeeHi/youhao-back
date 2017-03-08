@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!-- 慢SQL记录 *start* -->
+    <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+        <!-- 开启合并sql -->
+        <property name="mergeSql" value="true" />
+        <!-- 开启慢查询语句,1秒 -->
+        <property name="slowSqlMillis" value="1000" />
+        <property name="logSlowSql" value="true" />
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="name" value="default"/>
+        <property name="url" value="${database.url}"/>
+        <property name="driverClassName" value="${database.driver}"/>
+        <property name="username" value="${database.user}"/>
+        <property name="password" value="${database.password}"/>
+        <!--属性类型是字符串，通过别名的方式配置扩展插件，常用的插件有：监控统计用的filter:stat;
+        日志用的filter:log4j;防御sql注入的filter:wall;合并sql的filter:mergeStat-->
+        <property name="filters" value="log4j,wall"/>
+        <!--如果同时配置了filters和proxyFilters，是组合关系，并非替换关系-->
+        <property name="proxyFilters">
+            <list>
+                <ref bean="stat-filter"/>
+            </list>
+        </property>
+        <property name="maxActive" value="${database.maxActive}"/>
+        <property name="initialSize" value="${database.maxIdle}"/>
+        <property name="minIdle" value="${database.maxIdle}"/>
+        <property name="maxWait" value="${database.maxWait}"/>
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+        <!-- 验证连接有效与否的SQL，不同的数据配置不同 -->
+        <property name="validationQuery" value="select 1 " />
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="30000"/>
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="20"/>
+        <property name="maxOpenPreparedStatements" value="200"/>
+    </bean>
+
+    <!--事务管理-->
+    <bean name="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>

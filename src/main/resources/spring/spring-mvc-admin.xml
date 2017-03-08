@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+	<!-- 指定搜索自动装配组件的路径 -->
+	<context:component-scan base-package="com.chenx.gateway.web.admin" />
+
+	<!--指定图片路径-->
+	<mvc:resources mapping="/image/**" location="/image/"/>
+
+	<mvc:annotation-driven>
+		<!-- 增加使用@ResponseBody进行内容输出字符串时的编码为utf-8,以及如果输出javaBean使用FastJson -->
+		<mvc:message-converters>
+			<bean class="com.chenx.gateway.interceptor.WrappedFastJsonHttpMessageConverter"/>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!--common fileupload上传组件-->
+    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>-->
+
+	<!--servlet3.0上传组件-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></bean>
+</beans>
