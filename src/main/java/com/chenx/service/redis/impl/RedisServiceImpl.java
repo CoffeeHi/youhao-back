@@ -17,13 +17,19 @@ import java.util.concurrent.TimeUnit;
 @Service("redisService")
 public class RedisServiceImpl implements IRedisService {
 
-    @Resource(name = "redisDaoTemplate")
-    RedisDaoTemplate redisDaoTemplate;
+    @Resource
+    private RedisDaoTemplate redisDaoTemplate;
 
     @Override
     public void saveValue(String value, String redisKey, long expireTime) {
         BoundValueOperations keyValueOperations = redisDaoTemplate.getRedisTemplate().boundValueOps(redisKey);
         keyValueOperations.set(value, expireTime, TimeUnit.MILLISECONDS);
+    }
+
+    @Override
+    public void saveValue(String value, String redisKey, TimeUnit timeUnit, long expireTime) {
+        BoundValueOperations keyValueOperations = redisDaoTemplate.getRedisTemplate().boundValueOps(redisKey);
+        keyValueOperations.set(value, expireTime, timeUnit);
     }
 
     @Override

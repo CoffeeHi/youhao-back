@@ -14,10 +14,20 @@
 	<context:annotation-config />
 	<!-- 指定搜索自动装配组件的路径 -->
 	<context:component-scan base-package="com.chenx.gateway.web.login" />
+
+	<mvc:interceptors>
+		<bean class="com.chenx.gateway.interceptor.GlobalInterceptor" />
+	</mvc:interceptors>
+
 	<mvc:annotation-driven>
 		<!-- 增加使用@ResponseBody进行内容输出字符串时的编码为utf-8,以及如果输出javaBean使用FastJson -->
 		<mvc:message-converters>
 			<bean class="com.chenx.gateway.interceptor.WrappedFastJsonHttpMessageConverter"/>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+
+	<mvc:default-servlet-handler />
+
+	<!-- 全局的异常拦截器 -->
+	<bean class="com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver"/>
 </beans>

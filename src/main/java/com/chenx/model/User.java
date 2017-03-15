@@ -15,23 +15,25 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
 @Alias("user")
-@Table(name = "sys_user")
 public class User implements Serializable {
     @Id
-    @GeneratedValue(generator = "uuid")
     @Column(name = "user_id")
-    private String id;
+    private String userId;
     @Column(name = "user_name")
-    private String name;
+    private String userName;
+    @Column(name = "user_image")
+    private String userImage;
     @Column(name = "user_signature")
-    private String signature;
+    private String userSignature;
     @Column(name = "user_address")
-    private String address;
+    private String userAddress;
     @Column(name = "user_job")
-    private String job;
+    private String userJob;
     @Column(name = "user_introduce")
-    private String introduce;
+    private String userIntroduce;
+    @Column(name = "user_evaluation")
+    private double userEvaluation;
+
 
 }

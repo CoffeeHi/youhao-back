@@ -10,13 +10,15 @@
         <setting name="useGeneratedKeys" value="true" />
         <!-- 对于批量更新操作缓存SQL以提高性能  -->
         <setting name="defaultExecutorType" value="REUSE" />
+        <!--打印sql-->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
     </settings>
 
     <typeAliases>
         <!--纯模型所在目录-->
         <package name="com.chenx.model" />
         <!--混合模型所在目录-->
-        <package name="com.chenx.dao.dto"/>
+        <package name="com.chenx.dao"/>
     </typeAliases>
 
 </configuration>

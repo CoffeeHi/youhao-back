@@ -11,7 +11,8 @@
         <property name="slowSqlMillis" value="1000" />
         <property name="logSlowSql" value="true" />
     </bean>
-
+    <!--<bean id="logFilter" class="com.alibaba.druid.filter.logging.Log4jFilter">-->
+    <!--</bean>-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="name" value="default"/>
         <property name="url" value="${database.url}"/>
@@ -25,6 +26,7 @@
         <property name="proxyFilters">
             <list>
                 <ref bean="stat-filter"/>
+                <!--<ref bean="logFilter" />-->
             </list>
         </property>
         <property name="maxActive" value="${database.maxActive}"/>

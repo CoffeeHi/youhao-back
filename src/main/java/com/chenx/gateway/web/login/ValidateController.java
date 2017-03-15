@@ -25,9 +25,11 @@ public class ValidateController{
 
     /**
      * 校验验证图片
+     * type = 1-登录、2-注册、3-忘记密码
+     * code = 验证码
      */
-    @RequestMapping("validation/{type}")
-    public boolean validation(HttpServletRequest request, String code, @PathVariable("type") int type) {
+    @RequestMapping("validation/{type}/{code}")
+    public boolean validation(HttpServletRequest request, @PathVariable("code") String code, @PathVariable("type") int type) {
         String key = ValidateCodeType.valueOf(type).getTitle() + request.getSession().getId();
         Object value = redisService.findValue(key);
         if (value != null) {

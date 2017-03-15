@@ -3,66 +3,17 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.chenx.model.User">
+<mapper namespace="login">
 
-    <select id="validateLogin" parameterType="map" resultType="user">
-        SELECT * FROM sys_user WHERE (user_phone = #{account} OR user_email = #{account})
-         AND user_password = #{password};
+    <select id="validateLogin" parameterType="validateLogin" resultType="String">
+        SELECT acc_user_id AS userId FROM user_account WHERE (acc_phone = #{account} OR acc_email = #{account})
+         AND acc_pwd = #{password} AND acc_type=#{type} AND acc_status = 1;
     </select>
 
-
-    <select id="selectRecordByDate" parameterType="map" resultType="string">
-        SELECT DAI_ID FROM er_exam_daily_question_record
-        WHERE
-        <if test="dailyStart !=null and dailyOver!=null">
-            DAI_DATE BETWEEN #{dailyStart} AND #{dailyOver}
-        </if>
-        <if test="dailyStart ==null and dailyOver==null">
-            1=1
-        </if>
-        <if test="dailyStart ==null and dailyOver!=null">
-            <![CDATA[ DAI_DATE<=#{dailyOver} ]]>
-        </if>
-        <if test="dailyStart !=null and dailyOver==null">
-            <![CDATA[ DAI_DATE>=#{dailyStart} ]]>
-        </if>
-        AND PLM_ID=#{PLM_ID}
-        AND PVM_ID=#{PVM_ID}
-        AND PRM_ID=#{PRM_ID}
-        AND SUB_PRM_ID=#{SUB_PRM_ID}
-        ORDER BY DAI_DATE desc
+    <select id="selectUserInfo" parameterType="String" resultType="user">
+        SELECT 	user_id AS userId, user_name AS userName, user_image AS userImage,
+        user_signature AS userSignature, user_address AS userAddress, user_job AS userJob,
+        user_introduce AS userIntroduce, user_evaluation AS userEvaluation FROM user_info WHERE user_id=#{userId};
     </select>
 
-    <delete id="deleteRecordByQuestionId" parameterType="string">
-      DELETE FROM er_exam_daily_question_record
-	  WHERE
-	  DAI_ID = #{id} ;
-    </delete>
-
-    <select id="selectQuestionIdByDate" resultType="string">
-        SELECT DAI_ID FROM er_exam_daily_question_record WHERE DAI_DATE = #{dailydate};
-    </select>
-
-    <select id="getLast" parameterType="string" resultType="string">
-        SELECT 	DAI_ID
-        FROM
-        er_exam_daily_question_record
-        WHERE DAI_DATE <![CDATA[<]]> #{dailydate} ORDER BY DAI_DATE DESC LIMIT 1;
-    </select>
-
-
-    <select id="getDailyQuestionByTime" parameterType="string" resultType="string">
-        SELECT 	DAI_ID
-        FROM
-        er_exam_daily_question_record
-        WHERE DAI_DATE <![CDATA[=]]> #{dailydate};
-    </select>
-
-
-    <select id="getNext" parameterType="string" resultType="string">
-        SELECT 	DAI_ID
-        FROM
-        er_exam_daily_question_record
-        WHERE DAI_DATE > #{dailydate} ORDER BY DAI_DATE LIMIT 1;
-    </select>
 </mapper>

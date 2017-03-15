@@ -97,6 +97,27 @@
         <servlet-name>spring-mvc-portal</servlet-name>
         <url-pattern>/web/portal/*</url-pattern>
     </servlet-mapping>
+    <!--前端配置-->
+    <servlet>
+        <servlet-name>spring-mvc-front</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/spring-mvc-front.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <!--<multipart-config>-->
+        <!--<max-file-size>20848820</max-file-size>-->
+        <!--<max-request-size>418018841</max-request-size>-->
+        <!--<file-size-threshold>1048576</file-size-threshold>-->
+        <!--</multipart-config>-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spring-mvc-front</servlet-name>
+        <url-pattern>/web/front/*</url-pattern>
+    </servlet-mapping>
     <!-- Web侧登入的配置 -->
     <servlet>
         <servlet-name>spring-mvc-login</servlet-name>
