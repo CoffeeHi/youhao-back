@@ -5,15 +5,19 @@ import com.chenx.dao.RegisterDao;
 import com.chenx.model.Account;
 import com.chenx.model.User;
 import com.chenx.service.login.IRegisterService;
+import com.chenx.utils.CalendarUtils;
+import com.chenx.utils.NameUtils;
 import com.chenx.utils.SHA1Util;
 import com.chenx.utils.UUIDUtils;
 import com.fjhb.commons.exception.BasicRuntimeException;
+import org.apache.commons.lang3.time.DateUtils;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -30,7 +34,7 @@ public class RegisterServiceImpl implements IRegisterService {
     @Transactional
     public int register(String account, String password, int type) {
         Account a = new Account();
-        String defaultName = "User_" + System.currentTimeMillis();
+        String defaultName = NameUtils.getFuckingName() + "_" + CalendarUtils.getNameTail();
         //验证账号是否重复
         if(!StringUtils.isEmpty(sqlSessionTemplate.selectOne("register.validateAccount",account))){
             if (type == YouHaoConstant.ACCOUNT_TYPE_EMAIL)
@@ -42,7 +46,7 @@ public class RegisterServiceImpl implements IRegisterService {
         String userId = UUIDUtils.getUUID();
         user.setUserName(defaultName);
         user.setUserId(userId);
-        user.setUserImage("images/pp.jpg");
+        user.setUserImage("images/user_default.jpg");
         user.setUserEvaluation(1);
         sqlSessionTemplate.insert("register.createUser",user); //创建用户
 

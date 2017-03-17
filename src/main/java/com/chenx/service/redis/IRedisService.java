@@ -1,5 +1,7 @@
 package com.chenx.service.redis;
 
+import com.chenx.utils.dto.SessionInfo;
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -35,4 +37,19 @@ public interface IRedisService {
      * 使key失效
      */
     void dealDeleteKey(String redisKey);
+
+    /**
+     * 得到用户id
+     * @param sessionId
+     * @return
+     */
+    String getSessionUserId(String sessionId);
+
+    /**
+     * 得到session
+     * @param sessionId
+     * @return
+     */
+    SessionInfo getSession(String sessionId);
+
 }

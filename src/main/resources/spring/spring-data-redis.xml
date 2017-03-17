@@ -21,6 +21,7 @@
             <bean class="com.chenx.utils.FastJsonRedisSerializer"/>
         </property>
     </bean>
+
     <!--redisTemplate的批量操作封装-->
     <bean id="redisDaoTemplate" class="com.fjhb.commons.dao.template.RedisDaoTemplate">
         <property name="redisTemplate"   ref="redisTemplate" />

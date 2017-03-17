@@ -17,8 +17,9 @@
     <typeAliases>
         <!--纯模型所在目录-->
         <package name="com.chenx.model" />
-        <!--混合模型所在目录-->
         <package name="com.chenx.dao"/>
+        <!--混合模型所在目录-->
+        <package name="com.chenx.model.dto" />
     </typeAliases>
 
 </configuration>

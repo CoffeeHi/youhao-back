@@ -4230,3 +4230,717 @@ java.sql.SQLException: Operand should contain 1 column(s)
 [INFO ] http-apr-8090-exec-7 2017-03-15 23:53:17,117 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5119017e
 [INFO ] http-apr-8090-exec-6 2017-03-15 23:55:21,351 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5119017e
 [INFO ] localhost-startStop-2 2017-03-16 00:01:10,342 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 10:12:48,738 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 10:13:03,265 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-16 10:29:29,052 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@795314a1
+[INFO ] http-apr-8090-exec-6 2017-03-16 10:35:41,966 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@795314a1
+[INFO ] http-apr-8090-exec-4 2017-03-16 11:06:08,222 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f4d5a5d
+[INFO ] http-apr-8090-exec-8 2017-03-16 11:06:09,773 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f4d5a5d
+[INFO ] http-apr-8090-exec-6 2017-03-16 11:25:10,286 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f4d5a5d
+[INFO ] http-apr-8090-exec-1 2017-03-16 11:25:13,396 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f4d5a5d
+[ERROR] http-apr-8090-exec-10 2017-03-16 11:25:28,444 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户名或密码错误
+[ERROR] http-apr-8090-exec-5 2017-03-16 11:25:30,491 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户名或密码错误
+[ERROR] http-apr-8090-exec-2 2017-03-16 11:25:32,802 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户名或密码错误
+[INFO ] http-apr-8090-exec-1 2017-03-16 11:46:28,371 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f4d5a5d
+[INFO ] http-apr-8090-exec-4 2017-03-16 11:55:38,015 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f4d5a5d
+[INFO ] http-apr-8090-exec-6 2017-03-16 13:58:43,446 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-8 2017-03-16 14:14:32,932 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-9 2017-03-16 14:14:49,835 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-10 2017-03-16 14:17:07,701 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-7 2017-03-16 14:17:24,161 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-6 2017-03-16 14:21:20,489 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-4 2017-03-16 14:46:42,477 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-5 2017-03-16 14:46:57,427 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-2 2017-03-16 15:03:46,611 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-6 2017-03-16 15:03:51,065 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-5 2017-03-16 15:04:49,991 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-8 2017-03-16 15:05:08,601 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-6 2017-03-16 15:13:20,878 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-3 2017-03-16 15:13:34,521 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] http-apr-8090-exec-7 2017-03-16 15:18:37,366 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@54b87208
+[INFO ] localhost-startStop-2 2017-03-16 16:42:03,561 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(2)-127.0.0.1 2017-03-16 16:42:33,269 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(2)-127.0.0.1 2017-03-16 16:42:34,380 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 16:45:59,617 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 16:46:12,179 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-16 16:50:32,103 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-8 2017-03-16 16:50:47,396 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-2 2017-03-16 17:01:30,070 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-2 2017-03-16 17:02:04,296 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-10 2017-03-16 17:02:17,354 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-2 2017-03-16 17:17:43,348 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-8 2017-03-16 17:17:58,732 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-6 2017-03-16 17:18:06,996 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-3 2017-03-16 17:18:11,211 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-7 2017-03-16 17:18:13,375 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-2 2017-03-16 17:18:15,916 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-8 2017-03-16 17:18:16,146 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-6 2017-03-16 17:18:16,337 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-3 2017-03-16 17:18:22,921 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] http-apr-8090-exec-4 2017-03-16 17:20:44,722 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@167e90bc
+[INFO ] localhost-startStop-2 2017-03-16 17:24:25,288 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 17:24:57,824 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 17:25:10,769 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-16 17:25:32,050 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6cda7906
+[INFO ] http-apr-8090-exec-6 2017-03-16 17:25:36,814 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6cda7906
+[INFO ] http-apr-8090-exec-8 2017-03-16 17:25:38,327 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6cda7906
+[INFO ] http-apr-8090-exec-10 2017-03-16 17:25:40,221 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6cda7906
+[INFO ] http-apr-8090-exec-2 2017-03-16 17:25:43,755 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6cda7906
+[INFO ] http-apr-8090-exec-7 2017-03-16 18:56:48,965 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1230d933
+[INFO ] http-apr-8090-exec-9 2017-03-16 18:56:50,891 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@4ac409de
+[INFO ] http-apr-8090-exec-10 2017-03-16 18:56:55,058 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@4ac409de
+[INFO ] http-apr-8090-exec-2 2017-03-16 18:56:56,913 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@4ac409de
+[INFO ] http-apr-8090-exec-4 2017-03-16 18:57:00,104 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@4ac409de
+[INFO ] http-apr-8090-exec-6 2017-03-16 18:57:06,081 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@4ac409de
+[INFO ] http-apr-8090-exec-9 2017-03-16 18:57:09,121 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@4ac409de
+[ERROR] http-apr-8090-exec-1 2017-03-16 18:57:14,786 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 该手机号已注册
+[INFO ] localhost-startStop-2 2017-03-16 19:00:17,908 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 19:00:50,946 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 19:01:04,177 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-16 19:01:47,821 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@380167c4
+[INFO ] localhost-startStop-2 2017-03-16 19:02:00,791 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 19:02:34,902 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 19:02:48,224 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-16 19:03:53,241 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[INFO ] http-apr-8090-exec-6 2017-03-16 19:03:53,851 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[INFO ] http-apr-8090-exec-6 2017-03-16 19:03:59,545 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[INFO ] http-apr-8090-exec-8 2017-03-16 19:04:03,552 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[INFO ] http-apr-8090-exec-10 2017-03-16 19:04:07,049 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[INFO ] http-apr-8090-exec-4 2017-03-16 19:06:53,804 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[INFO ] http-apr-8090-exec-2 2017-03-16 19:06:58,718 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[ERROR] http-apr-8090-exec-7 2017-03-16 19:07:16,762                   druid.sql.Statement     - {conn-10005, pstmt-20007} execute error. INSERT INTO user_account
+       (acc_id,acc_user_id,acc_email,acc_phone,acc_pwd,acc_type,acc_status,acc_regtime)
+        VALUES (?,?,?,?,?,?,?,?)
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '9f7598b8562740ca845505a4f4204f98' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4232)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4164)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2838)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1307)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:600)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:131)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy45.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy18.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:240)
+	at com.chenx.service.login.impl.RegisterServiceImpl.register(RegisterServiceImpl.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy33.register(Unknown Source)
+	at com.chenx.gateway.web.login.RegisterController.validateLogin(RegisterController.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:817)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:731)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:968)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:870)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:650)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:844)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:218)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:442)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1082)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:623)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2517)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2506)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ] http-apr-8090-exec-1 2017-03-16 19:10:22,193 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@5f9d1e77
+[ERROR] http-apr-8090-exec-6 2017-03-16 19:10:40,771                   druid.sql.Statement     - {conn-10005, pstmt-20007} execute error. INSERT INTO user_account
+       (acc_id,acc_user_id,acc_email,acc_phone,acc_pwd,acc_type,acc_status,acc_regtime)
+        VALUES (?,?,?,?,?,?,?,?)
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '9f7598b8562740ca845505a4f4204f98' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1039)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4232)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4164)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2838)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1307)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:600)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:131)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:62)
+	at com.sun.proxy.$Proxy45.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.ReuseExecutor.doUpdate(ReuseExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy18.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:240)
+	at com.chenx.service.login.impl.RegisterServiceImpl.register(RegisterServiceImpl.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy33.register(Unknown Source)
+	at com.chenx.gateway.web.login.RegisterController.validateLogin(RegisterController.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:817)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:731)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:968)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:870)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:650)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:844)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:218)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:442)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1082)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:623)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2517)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2506)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ] localhost-startStop-2 2017-03-16 20:09:40,056 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 20:10:19,781 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 20:10:35,025 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-16 20:11:37,691 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@71f48d5e
+[INFO ] localhost-startStop-2 2017-03-16 20:16:07,561 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(5)-127.0.0.1 2017-03-16 20:16:41,120 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(5)-127.0.0.1 2017-03-16 20:16:54,490 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-16 20:17:25,986 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@76bcf397
+[INFO ] http-apr-8090-exec-3 2017-03-16 20:20:43,515 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1eb249f3
+[INFO ] http-apr-8090-exec-5 2017-03-16 20:20:43,584 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@d54386a
+[INFO ] http-apr-8090-exec-9 2017-03-16 20:41:02,474 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--3426582375C848BAFFA5E8C24FFB2974
+[INFO ] http-apr-8090-exec-10 2017-03-16 20:41:41,219 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-4 2017-03-16 20:41:51,233 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-1 2017-03-16 20:41:55,510 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-5 2017-03-16 20:41:58,406 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-9 2017-03-16 20:42:01,002 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-2 2017-03-16 20:42:03,610 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-4 2017-03-16 20:42:06,330 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-1 2017-03-16 20:42:08,988 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-5 2017-03-16 20:42:09,224 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-9 2017-03-16 20:42:09,390 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-2 2017-03-16 20:42:09,590 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-4 2017-03-16 20:42:09,827 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-8 2017-03-16 20:42:10,027 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-10 2017-03-16 20:42:14,783 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-3 2017-03-16 20:42:54,889 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-5 2017-03-16 20:43:10,712 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-8 2017-03-16 20:47:24,037 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--3426582375C848BAFFA5E8C24FFB2974
+[INFO ] http-apr-8090-exec-10 2017-03-16 20:47:46,211 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--3426582375C848BAFFA5E8C24FFB2974
+[INFO ] http-apr-8090-exec-3 2017-03-16 20:48:55,154 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--3426582375C848BAFFA5E8C24FFB2974
+[INFO ] http-apr-8090-exec-9 2017-03-16 20:52:31,225 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--3426582375C848BAFFA5E8C24FFB2974
+[INFO ] http-apr-8090-exec-6 2017-03-16 20:53:21,140 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@1fdffcee
+[INFO ] http-apr-8090-exec-8 2017-03-16 21:25:12,051 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@35756bc0
+[INFO ] http-apr-8090-exec-10 2017-03-16 21:45:45,651 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@35756bc0
+[INFO ] http-apr-8090-exec-1 2017-03-16 21:45:49,671 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@35756bc0
+[INFO ] http-apr-8090-exec-3 2017-03-16 21:49:03,993 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@35756bc0
+[INFO ] http-apr-8090-exec-4 2017-03-16 21:49:12,966 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@35756bc0
+[INFO ] http-apr-8090-exec-9 2017-03-16 21:58:56,887 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@35756bc0
+[INFO ] http-apr-8090-exec-10 2017-03-16 22:00:37,815 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@35756bc0
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 23:47:53,008 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-16 23:48:07,418 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-8 2017-03-16 23:56:32,457 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-16 23:56:46,247 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-16 23:56:50,159 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-4 2017-03-16 23:56:55,069 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-6 2017-03-16 23:56:56,832 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-8 2017-03-16 23:56:58,860 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-16 23:59:34,880 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-17 00:00:47,651 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-4 2017-03-17 00:01:38,720 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-6 2017-03-17 00:01:41,057 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-8 2017-03-17 00:01:53,898 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-17 00:02:05,684 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-17 00:02:46,174 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-4 2017-03-17 00:03:32,814 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-6 2017-03-17 00:03:40,177 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-8 2017-03-17 00:03:44,232 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-17 00:03:44,949 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-17 00:06:26,394 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-4 2017-03-17 00:06:31,495 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-6 2017-03-17 00:06:49,029 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-8 2017-03-17 00:06:51,572 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-17 00:07:21,731 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-17 00:07:23,919 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-4 2017-03-17 00:07:27,339 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-6 2017-03-17 00:07:45,047 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-8 2017-03-17 00:07:48,117 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-17 00:07:51,197 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-17 00:07:54,656 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-4 2017-03-17 00:08:01,240 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-6 2017-03-17 00:08:07,888 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-8 2017-03-17 00:08:09,130 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-17 00:08:10,522 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-17 00:08:12,022 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-4 2017-03-17 00:08:14,138 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-6 2017-03-17 00:08:23,420 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-8 2017-03-17 00:08:52,590 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-10 2017-03-17 00:09:05,685 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--E6874CC687E62B766E3F7977BE727CC0
+[INFO ] http-apr-8090-exec-2 2017-03-17 00:09:34,063 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@2661aa68
+[INFO ] RMI TCP Connection(4)-127.0.0.1 2017-03-17 10:21:52,526 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(4)-127.0.0.1 2017-03-17 10:22:07,179 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] http-apr-8090-exec-4 2017-03-17 10:22:47,750 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6c5cea03
+[INFO ] http-apr-8090-exec-8 2017-03-17 10:26:25,131 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6c5cea03
+[INFO ] http-apr-8090-exec-2 2017-03-17 10:37:12,047 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@6c5cea03
+[INFO ] localhost-startStop-2 2017-03-17 10:51:11,180 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 11:07:00,501 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 11:07:15,143 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] localhost-startStop-2 2017-03-17 11:19:02,093 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 11:20:03,971 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 11:20:23,203 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[INFO ] localhost-startStop-2 2017-03-17 11:20:46,585 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[ERROR] RMI TCP Connection(2)-127.0.0.1 2017-03-17 11:21:34,828 com.alibaba.druid.filter.stat.StatFilter     - slow sql 1298 millis. 
+select 1 
+[]
+[INFO ] RMI TCP Connection(2)-127.0.0.1 2017-03-17 11:21:34,996 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(2)-127.0.0.1 2017-03-17 11:21:50,604 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[ERROR] http-apr-8090-exec-6 2017-03-17 11:28:41,831 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-8 2017-03-17 11:32:54,778 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-10 2017-03-17 11:34:44,515 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-2 2017-03-17 11:35:16,799 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-4 2017-03-17 11:36:01,173 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-6 2017-03-17 11:36:16,555 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-8 2017-03-17 11:36:30,452 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@539dad2f
+[ERROR] http-apr-8090-exec-2 2017-03-17 12:46:27,049 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-5 2017-03-17 12:46:36,841 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-7 2017-03-17 12:46:40,525 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@52c2a9ff
+[INFO ] localhost-startStop-2 2017-03-17 12:48:42,612 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 12:49:16,065 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 12:49:29,271 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[ERROR] http-apr-8090-exec-8 2017-03-17 12:50:05,608 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-10 2017-03-17 12:50:10,267 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-2 2017-03-17 12:50:13,290 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-6 2017-03-17 12:50:33,030 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@45b09553
+[ERROR] http-apr-8090-exec-8 2017-03-17 12:50:34,369 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-10 2017-03-17 12:50:41,811 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@45b09553
+[ERROR] http-apr-8090-exec-5 2017-03-17 13:38:34,699 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 没有保存cookie
+[INFO ] localhost-startStop-2 2017-03-17 13:56:40,262 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(4)-127.0.0.1 2017-03-17 13:57:10,657 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(4)-127.0.0.1 2017-03-17 13:57:24,128 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[ERROR] http-apr-8090-exec-4 2017-03-17 13:57:32,753 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-6 2017-03-17 13:57:42,258 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-8 2017-03-17 14:01:55,327 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-10 2017-03-17 14:02:05,173 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-2 2017-03-17 14:02:42,255 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[ERROR] http-apr-8090-exec-10 2017-03-17 14:05:40,116 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-2 2017-03-17 14:05:50,147 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-3 2017-03-17 14:06:01,505 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[ERROR] http-apr-8090-exec-6 2017-03-17 14:07:12,855 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-8 2017-03-17 14:07:22,873 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-10 2017-03-17 14:07:28,781 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[INFO ] http-apr-8090-exec-10 2017-03-17 14:07:33,604 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[INFO ] http-apr-8090-exec-2 2017-03-17 14:07:37,807 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[INFO ] http-apr-8090-exec-5 2017-03-17 14:07:40,507 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[ERROR] http-apr-8090-exec-8 2017-03-17 14:08:51,106 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-2 2017-03-17 14:08:54,413 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-5 2017-03-17 14:09:04,373 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-3 2017-03-17 14:09:16,050 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-9 2017-03-17 14:09:26,004 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-8 2017-03-17 14:09:53,101 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[ERROR] http-apr-8090-exec-3 2017-03-17 14:11:49,197 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-9 2017-03-17 14:11:52,967 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-2 2017-03-17 14:12:01,431 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[ERROR] http-apr-8090-exec-5 2017-03-17 14:12:03,014 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-10 2017-03-17 14:15:22,417 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-2 2017-03-17 14:15:32,411 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-6 2017-03-17 14:15:44,688 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-4 2017-03-17 14:15:52,404 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-3 2017-03-17 14:16:02,427 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-10 2017-03-17 14:16:12,413 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-2 2017-03-17 14:16:22,408 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-6 2017-03-17 14:16:32,453 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-4 2017-03-17 14:16:42,407 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-3 2017-03-17 14:16:52,932 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-10 2017-03-17 14:17:02,402 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-2 2017-03-17 14:17:10,484 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-6 2017-03-17 14:17:13,787 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-4 2017-03-17 14:17:23,143 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[ERROR] http-apr-8090-exec-3 2017-03-17 14:17:23,752 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-6 2017-03-17 14:17:53,788 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-4 2017-03-17 14:18:03,761 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[ERROR] http-apr-8090-exec-3 2017-03-17 14:18:13,795 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 用户未登录
+[INFO ] http-apr-8090-exec-10 2017-03-17 14:18:15,308 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@51daa9ba
+[INFO ] localhost-startStop-2 2017-03-17 14:42:55,844 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 14:43:35,931 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(3)-127.0.0.1 2017-03-17 14:43:50,208 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[ERROR] http-apr-8090-exec-2 2017-03-17 14:44:02,430 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-4 2017-03-17 14:44:02,892 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-6 2017-03-17 14:44:12,428 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 14:44:12,871 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 14:44:22,423 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 14:44:22,878 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[INFO ] http-apr-8090-exec-4 2017-03-17 14:44:26,075 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] http-apr-8090-exec-6 2017-03-17 14:44:27,319 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] http-apr-8090-exec-9 2017-03-17 14:44:29,511 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] http-apr-8090-exec-5 2017-03-17 14:44:33,252 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] http-apr-8090-exec-7 2017-03-17 14:44:35,919 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] http-apr-8090-exec-4 2017-03-17 14:44:39,360 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] http-apr-8090-exec-1 2017-03-17 14:44:41,935 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[ERROR] http-apr-8090-exec-8 2017-03-17 14:44:42,405 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-5 2017-03-17 14:44:42,860 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-4 2017-03-17 14:44:52,415 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 14:44:53,035 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:05:32,901 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:05:42,765 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:05:42,958 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:05:52,898 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:05:57,827 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:06:02,906 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:06:07,434 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:06:12,903 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:06:22,903 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:06:32,900 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:06:42,964 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:06:52,944 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:07:02,905 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:07:12,910 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:07:22,898 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:07:32,912 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:07:42,944 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:07:52,909 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:08:02,913 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:08:12,904 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:08:22,905 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:08:32,912 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:08:42,899 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:08:52,907 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:09:02,905 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:09:12,913 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:09:22,904 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:09:32,923 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:09:42,912 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:09:52,908 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:10:00,966 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:10:02,904 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:10:06,633 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:10:12,909 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:10:22,913 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:10:32,905 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:10:42,938 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:10:52,987 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:11:02,936 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:11:12,914 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:11:22,921 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:11:33,010 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:11:47,929 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:11:52,916 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:12:22,981 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:12:33,029 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:12:42,877 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:12:52,875 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:13:02,884 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:13:12,900 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:13:22,890 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:13:32,886 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:13:42,886 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:13:52,888 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:14:02,893 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:14:12,899 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:14:22,936 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:14:33,577 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:14:42,893 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:14:52,884 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:15:02,876 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:15:12,892 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:15:22,896 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:15:32,882 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:15:42,902 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:15:52,880 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:16:02,886 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:16:12,901 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:16:22,910 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:16:32,882 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:16:42,896 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:16:52,885 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:17:02,892 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:17:12,935 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:17:22,895 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:17:32,882 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:17:42,901 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:18:33,047 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:18:42,929 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:18:52,938 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:19:02,921 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:19:13,241 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:19:22,928 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:19:32,934 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:19:42,927 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:19:52,943 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:20:02,917 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:20:12,930 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:20:22,923 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:20:32,920 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:20:42,927 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:20:52,923 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:21:02,938 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:21:12,937 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:21:22,921 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:21:32,956 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:21:42,922 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:21:52,933 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:22:02,936 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:22:12,930 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:22:22,990 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:22:32,928 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:22:42,943 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:22:52,930 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:23:02,936 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:23:12,958 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:23:22,927 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:23:32,943 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:23:42,932 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:23:52,941 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:24:02,948 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:24:12,936 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:24:22,949 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:24:32,929 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:24:42,940 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:24:52,958 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:25:02,949 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:25:12,945 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:25:22,927 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:25:32,935 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:25:42,935 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:25:52,969 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:26:06,998 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:26:12,910 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:26:22,899 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:26:32,891 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:26:42,907 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:26:52,890 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:27:02,908 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:27:12,891 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:27:22,895 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:27:32,938 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:27:42,964 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:27:52,900 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:28:02,902 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:28:12,905 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:28:22,897 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:28:32,903 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:28:42,894 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:28:52,954 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:29:02,906 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:29:12,926 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:29:22,933 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:29:32,899 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:29:42,899 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:29:53,551 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:30:02,895 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:30:13,217 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:30:22,901 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:30:32,914 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:30:42,908 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:30:53,459 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:31:02,898 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:31:13,289 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - 登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:31:23,000 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:31:32,969 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:31:42,907 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:31:52,927 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:32:05,240 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-3 2017-03-17 15:32:12,940 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:32:22,937 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:32:32,655 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:32:41,392 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:32:43,291 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:50:28,016 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[INFO ] http-apr-8090-exec-2 2017-03-17 15:50:38,514 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--97DF7C26AB7BD2C1DDC3593DFC66C557
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:52:04,510 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[INFO ] http-apr-8090-exec-3 2017-03-17 15:52:09,491 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--97DF7C26AB7BD2C1DDC3593DFC66C557
+[ERROR] http-apr-8090-exec-9 2017-03-17 15:52:12,585 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:52:32,591 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[INFO ] http-apr-8090-exec-2 2017-03-17 15:52:35,070 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--97DF7C26AB7BD2C1DDC3593DFC66C557
+[ERROR] http-apr-8090-exec-8 2017-03-17 15:52:38,104 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[INFO ] http-apr-8090-exec-3 2017-03-17 15:52:57,781 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] http-apr-8090-exec-9 2017-03-17 15:53:34,303 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--97DF7C26AB7BD2C1DDC3593DFC66C557
+[ERROR] http-apr-8090-exec-10 2017-03-17 15:58:10,818 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-2 2017-03-17 15:58:50,297 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-7 2017-03-17 15:59:03,119 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-5 2017-03-17 15:59:15,524 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-6 2017-03-17 15:59:52,926 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-10 2017-03-17 16:00:12,289 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[INFO ] http-apr-8090-exec-2 2017-03-17 16:00:26,369 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@3dde3f2e
+[INFO ] localhost-startStop-2 2017-03-17 16:40:58,135 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} closed
+[INFO ] RMI TCP Connection(5)-127.0.0.1 2017-03-17 16:41:28,934 com.alibaba.druid.pool.DruidDataSource     - {dataSource-1} inited
+[INFO ] RMI TCP Connection(5)-127.0.0.1 2017-03-17 16:41:41,959 org.hibernate.validator.internal.util.Version     - HV000001: Hibernate Validator 5.2.2.Final
+[ERROR] http-apr-8090-exec-6 2017-03-17 16:42:00,689 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[INFO ] http-apr-8090-exec-8 2017-03-17 16:42:00,800 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--C8A1EFDFD0EBCDC3EC206E7CA3CAD126
+[INFO ] http-apr-8090-exec-10 2017-03-17 16:42:10,734 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--C8A1EFDFD0EBCDC3EC206E7CA3CAD126
+[ERROR] http-apr-8090-exec-2 2017-03-17 16:42:18,464 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[ERROR] http-apr-8090-exec-4 2017-03-17 16:42:35,739 com.chenx.gateway.interceptor.WrappedHandlerExceptionResolver     - {Code:401,message:用户未登录或登录超时}
+
+用户未登录或登录超时
+[INFO ] http-apr-8090-exec-7 2017-03-17 16:42:35,758 com.chenx.gateway.interceptor.UserLoginInterceptor     - 用户未登录,当前sessionId为--C8A1EFDFD0EBCDC3EC206E7CA3CAD126
+[INFO ] http-apr-8090-exec-8 2017-03-17 16:42:52,115 com.chenx.utils.RandomValidateCodeUtils     - -------加载验证码----------------------------------org.apache.catalina.session.StandardSessionFacade@7fa0b304

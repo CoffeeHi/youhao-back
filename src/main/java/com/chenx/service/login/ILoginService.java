@@ -9,4 +9,6 @@ import com.chenx.utils.dto.SessionInfo;
 public interface ILoginService {
 
     SessionInfo validateLogin(String account, String password, String sessionId);
+
+    SessionInfo checkLogin(String userId, String sessionId);
 }

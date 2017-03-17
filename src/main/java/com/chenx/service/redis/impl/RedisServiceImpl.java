@@ -1,12 +1,25 @@
 package com.chenx.service.redis.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.chenx.gateway.commons.CommonErrCode;
 import com.chenx.service.redis.IRedisService;
+import com.chenx.utils.MapUtils;
+import com.chenx.utils.dto.SessionInfo;
 import com.fjhb.commons.dao.template.RedisDaoTemplate;
+import com.fjhb.commons.dao.util.BeanUtils;
+import com.fjhb.commons.exception.BasicRuntimeException;
+import com.fjhb.commons.exception.ErrCodeConstant;
+import com.fjhb.commons.util.BeanUtil;
 import lombok.extern.log4j.Log4j;
 import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
+import javax.naming.AuthenticationException;
+import java.lang.reflect.Field;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,6 +54,22 @@ public class RedisServiceImpl implements IRedisService {
     @Override
     public void dealDeleteKey(String redisKey) {
         redisDaoTemplate.deleteRedisKey(redisKey);
+    }
+
+    @Override
+    public String getSessionUserId(String redisKey) {
+        SessionInfo sessionInfo = this.getSession(redisKey);
+        if (StringUtils.isEmpty(sessionInfo)){
+            throw new BasicRuntimeException("session已过期，请重新登录");
+        }
+        return sessionInfo.getUserId();
+    }
+
+    @Override
+    public SessionInfo getSession(String redisKey) {
+        BoundValueOperations keyValueOperations = redisDaoTemplate.getRedisTemplate().boundValueOps(redisKey);
+        SessionInfo sessionInfo = JSON.parseObject((String) keyValueOperations.get(), SessionInfo.class);
+        return sessionInfo;
     }
 
 }

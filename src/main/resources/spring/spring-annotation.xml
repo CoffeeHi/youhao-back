@@ -12,6 +12,8 @@
 
     <!-- 激活Spring的annotation配置 -->
     <context:annotation-config/>
+    <context:component-scan base-package="com.chenx.dao"/>
+    <context:component-scan base-package="com.chenx.service"/>
 
     <!--<bean id="exception-throwing-interceptor" class="com.fjhb.commons.exception.ExceptionHandler"/>-->
     <!--<aop:config>-->

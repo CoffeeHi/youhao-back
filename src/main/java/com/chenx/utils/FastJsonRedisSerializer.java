@@ -17,7 +17,7 @@ public class FastJsonRedisSerializer implements RedisSerializer<Object> {
     private final Charset charset;
 
     public FastJsonRedisSerializer() {
-        this(Charset.forName("UTF8"));
+        this(Charset.forName("UTF-8"));
     }
 
     public FastJsonRedisSerializer(Charset charset)
@@ -33,7 +33,9 @@ public class FastJsonRedisSerializer implements RedisSerializer<Object> {
         SerializerFeature[] features = {SerializerFeature.WriteClassName};
         if (s instanceof String) {
             return s == null ? null : ((String) s).getBytes(charset);
-        } else {
+        } else if (s instanceof byte[]){
+            return (byte[]) s;
+        }else{
             return JSON.toJSONString(s, features).getBytes(charset);
         }
     }
@@ -45,6 +47,7 @@ public class FastJsonRedisSerializer implements RedisSerializer<Object> {
         }
 
         String temp = new String(bytes, charset);
-        return temp.startsWith("{") && temp.endsWith("}")?JSON.parse(temp) : temp;
+//        return temp.startsWith("{") && temp.endsWith("}")?JSON.parse(temp) : temp;
+        return temp;
     }
 }
