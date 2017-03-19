@@ -87,11 +87,6 @@
             <param-value>classpath:spring/spring-mvc-portal.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
-        <!--<multipart-config>-->
-            <!--<max-file-size>20848820</max-file-size>-->
-            <!--<max-request-size>418018841</max-request-size>-->
-            <!--<file-size-threshold>1048576</file-size-threshold>-->
-        <!--</multipart-config>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>spring-mvc-portal</servlet-name>
@@ -108,11 +103,11 @@
             <param-value>classpath:spring/spring-mvc-front.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
-        <!--<multipart-config>-->
-        <!--<max-file-size>20848820</max-file-size>-->
-        <!--<max-request-size>418018841</max-request-size>-->
-        <!--<file-size-threshold>1048576</file-size-threshold>-->
-        <!--</multipart-config>-->
+        <multipart-config>
+            <max-file-size>20848820</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
     </servlet>
     <servlet-mapping>
         <servlet-name>spring-mvc-front</servlet-name>

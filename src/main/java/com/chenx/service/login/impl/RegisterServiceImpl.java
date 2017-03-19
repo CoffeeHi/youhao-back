@@ -1,7 +1,6 @@
 package com.chenx.service.login.impl;
 
 import com.chenx.YouHaoConstant;
-import com.chenx.dao.RegisterDao;
 import com.chenx.model.Account;
 import com.chenx.model.User;
 import com.chenx.service.login.IRegisterService;
@@ -10,14 +9,12 @@ import com.chenx.utils.NameUtils;
 import com.chenx.utils.SHA1Util;
 import com.chenx.utils.UUIDUtils;
 import com.fjhb.commons.exception.BasicRuntimeException;
-import org.apache.commons.lang3.time.DateUtils;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
-import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -46,7 +43,7 @@ public class RegisterServiceImpl implements IRegisterService {
         String userId = UUIDUtils.getUUID();
         user.setUserName(defaultName);
         user.setUserId(userId);
-        user.setUserImage("images/user_default.jpg");
+        user.setUserImage("upload/user/head.png");
         user.setUserEvaluation(1);
         sqlSessionTemplate.insert("register.createUser",user); //创建用户
 

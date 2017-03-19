@@ -14,7 +14,7 @@
 	<context:component-scan base-package="com.chenx.gateway.web.front" />
 
 	<!--指定图片路径-->
-	<mvc:resources mapping="/image/**" location="/image/"/>
+	<mvc:resources mapping="/images/**" location="/images/"/>
 
 	<mvc:interceptors>
 		<bean class="com.chenx.gateway.interceptor.UserLoginInterceptor"/>

@@ -31,4 +31,7 @@
 	WHERE user_id = #{userId}
   </select>
 
+	<update id="updateUserImage" parameterType="map">
+		UPDATE user_info SET user_image = #{imagePath} WHERE user_id=#{userId}
+	</update>
 </mapper>

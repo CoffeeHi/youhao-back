@@ -70,7 +70,7 @@ public class RandomValidateCodeUtils {
         for (int i = 1; i <= stringNum; i++) {
             randomString = drowString(g, randomString, i);
         }
-        log.info("-------加载验证码----------------------------------" + session);
+        log.info("------加载验证码------" + session);
         redisService.saveValue(randomString, redisKey, YouHaoConstant.VALIDATION_CODE_EXPIRATION_TIME);
         g.dispose();
         try {

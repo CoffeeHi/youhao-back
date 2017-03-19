@@ -27,7 +27,7 @@ public class NameUtils {
         }else {
             name = 复姓[new Random().nextInt(外姓.length)];
         }
-        return name + '·' +  名[new Random().nextInt(名.length)];
+        return name + 名[new Random().nextInt(名.length)];
     }
 
     @Test

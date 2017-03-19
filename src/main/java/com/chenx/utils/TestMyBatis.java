@@ -13,6 +13,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/3/1 0001.
@@ -77,7 +79,11 @@ public class TestMyBatis{
     @Test
     public void testGetUserInfo(){
         String userId = "95d415fde2ff4f0fafe74c17914f1df4";
-        System.out.println(JSON.toJSONString(sqlSessionTemplate.selectOne("user.getUserInfo", userId)));
+//        System.out.println(JSON.toJSONString(sqlSessionTemplate.selectOne("user.getUserInfo", userId)));
+        Map param = new HashMap<>();
+        param.put("userId", userId);
+        param.put("imagePath", "sadasd");
+        sqlSessionTemplate.update("user.updateUserImage", param);
     }
 
     @Test

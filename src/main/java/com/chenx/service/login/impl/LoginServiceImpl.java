@@ -13,6 +13,7 @@ import com.chenx.utils.UUIDUtils;
 import com.chenx.utils.dto.SessionInfo;
 import com.fjhb.commons.dao.template.RedisDaoTemplate;
 import com.fjhb.commons.exception.BasicRuntimeException;
+import lombok.extern.log4j.Log4j;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Administrator on 2017/3/8 0008.
  */
-
+@Log4j
 @Service("loginService")
 public class LoginServiceImpl implements ILoginService {
 
@@ -61,5 +62,12 @@ public class LoginServiceImpl implements ILoginService {
             return session;
         else
             throw new BasicRuntimeException(new CommonErrCode("401", "用户未登录或登录超时"));
+    }
+
+    @Override
+    public boolean exitLogin(String sessionId) {
+        log.info("用户<" + redisService.getSession(sessionId).getUserName()+ ">退出登录");
+        redisService.dealDeleteKey(sessionId);
+        return true;
     }
 }

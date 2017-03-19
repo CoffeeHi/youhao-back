@@ -43,4 +43,8 @@ public class LoginController extends BasicController{
         return loginService.checkLogin(userId, request.getRequestedSessionId());
     }
 
+    @RequestMapping(value = "frontExit", method = RequestMethod.DELETE)
+    public boolean frontExit(){
+        return loginService.exitLogin(request.getRequestedSessionId());
+    }
 }

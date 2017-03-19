@@ -11,4 +11,6 @@ public interface ILoginService {
     SessionInfo validateLogin(String account, String password, String sessionId);
 
     SessionInfo checkLogin(String userId, String sessionId);
+
+    boolean exitLogin(String sessionId);
 }

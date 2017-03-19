@@ -9,4 +9,5 @@ import com.chenx.model.dto.EditUserInfo;
 public interface IUserService {
     int editUserInfo(EditUserInfo editUserInfo, String sessionId);
     UserInfo getUserInfo(String sessionId);
+    int saveImagePath(String userId, String imagePath, String sessionId);
 }
