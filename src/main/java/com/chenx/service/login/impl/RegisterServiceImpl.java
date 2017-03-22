@@ -41,10 +41,10 @@ public class RegisterServiceImpl implements IRegisterService {
         }
         User user = new User();
         String userId = UUIDUtils.getUUID();
-        user.setUserName(defaultName);
-        user.setUserId(userId);
-        user.setUserImage("upload/user/head.png");
-        user.setUserEvaluation(1);
+        user.setName(defaultName);
+        user.setId(userId);
+        user.setImage(YouHaoConstant.DEFAULT_USER_IMG);
+        user.setEvaluation(1);
         sqlSessionTemplate.insert("register.createUser",user); //创建用户
 
         if (type == YouHaoConstant.ACCOUNT_TYPE_EMAIL){

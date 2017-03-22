@@ -15,6 +15,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SessionInfo implements Serializable{
+    private String sessionId;
     private String userId;
     private String userName;
     private String userImage;

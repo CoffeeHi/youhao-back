@@ -17,23 +17,13 @@ import java.io.Serializable;
 @Data
 @Alias("user")
 public class User implements Serializable {
-    @Id
-    @Column(name = "user_id")
-    private String userId;
-    @Column(name = "user_name")
-    private String userName;
-    @Column(name = "user_image")
-    private String userImage;
-    @Column(name = "user_signature")
-    private String userSignature;
-    @Column(name = "user_address")
-    private String userAddress;
-    @Column(name = "user_job")
-    private String userJob;
-    @Column(name = "user_introduce")
-    private String userIntroduce;
-    @Column(name = "user_evaluation")
-    private double userEvaluation;
-
+    private String id;
+    private String name;
+    private String image;
+    private String signature;
+    private String address;
+    private String job;
+    private String introduce;
+    private double evaluation;
 
 }

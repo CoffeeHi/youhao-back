@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2017/3/16 0016.
  */
@@ -12,7 +14,7 @@ import org.apache.ibatis.type.Alias;
 @AllArgsConstructor
 @NoArgsConstructor
 @Alias("userInfo")
-public class UserInfo {
+public class UserInfo implements Serializable {
     private String id;
     private String name;
     private String job;

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="tour">
+
+    <insert id="initTourState" parameterType="tourState">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select replace(uuid(),'-','') from dual
+		</selectKey>
+		INSERT INTO tour_state
+		(ts_id,
+		ts_tour_id,
+		ts_users,
+		ts_looks,
+		ts_coms,
+		ts_goods,
+		ts_state
+		)
+		VALUES
+		(#{id},
+		#{tourId},
+		#{users},
+		#{looks},
+		#{coms},
+		#{goods},
+		#{state}
+		);
+	</insert>
+
+	<insert id="initTourUserState" parameterType="tourUserState">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select replace(uuid(),'-','') from dual
+		</selectKey>
+		INSERT INTO tour_user_state
+		(tus_id,
+		tus_tour_id,
+		tus_user_id,
+		tus_user_state,
+		tus_user_role,
+		tus_user_jointime
+		)
+		VALUES
+		(#{id},
+		#{tourId},
+		#{userId},
+		#{userState},
+		#{userRole},
+		#{userJoinTime}
+		);
+	</insert>
+
+</mapper>

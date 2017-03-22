@@ -1,7 +1,7 @@
 package com.chenx.gateway.web.portal;
 
 import com.chenx.gateway.commons.BasicController;
-import com.chenx.model.Travel;
+import com.chenx.model.Tour;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +18,7 @@ import java.util.List;
 public class IndexController extends BasicController {
 
     @RequestMapping(value = "index/{timestamp}", method = RequestMethod.GET)
-    public List<Travel> findTravelList(@PathVariable long timestamp){
+    public List<Tour> findTravelList(@PathVariable long timestamp){
         return null;
     }
 

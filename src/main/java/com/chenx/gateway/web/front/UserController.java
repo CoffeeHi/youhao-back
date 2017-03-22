@@ -9,6 +9,7 @@ import com.chenx.service.front.IUserService;
 import com.chenx.service.redis.IRedisService;
 import com.chenx.utils.ImageCut;
 import com.chenx.utils.UUIDUtils;
+import com.chenx.utils.dto.SessionInfo;
 import com.fjhb.commons.exception.BasicRuntimeException;
 import lombok.extern.log4j.Log4j;
 import org.springframework.web.bind.annotation.*;
@@ -37,11 +38,14 @@ public class UserController extends BasicController{
 
     @RequestMapping(value = "edit", method = RequestMethod.PUT)
     public int edit(@RequestBody EditUserInfo editUserInfo){
-        return userService.editUserInfo(editUserInfo, request.getRequestedSessionId());
+        SessionInfo sessionInfo = redisService.getSession(request.getRequestedSessionId());
+        editUserInfo.setId(sessionInfo.getUserId());
+        return userService.editUserInfo(editUserInfo, sessionInfo);
     }
 
     @RequestMapping(value = "upload/userImage", method = RequestMethod.POST)
     public String uploadUserImage(MultipartFile avatar_file, String avatar_src, String avatar_data){
+        log.info("上传用户头像开始-----");
         log.info("当前操作系统为:" + System.getProperty("os.name"));
         String dir = "upload/user/images/" + redisService.getSessionUserId(request.getRequestedSessionId()) + "/";
         String path = null;
@@ -57,9 +61,9 @@ public class UserController extends BasicController{
         if(type==null || !type.toLowerCase().startsWith("image/")) throw new BasicRuntimeException("不支持的文件类型，仅支持图片！");
         String fileName = UUIDUtils.getUUID() + name.substring(name.lastIndexOf('.'));
         String savePath = dir + fileName;
-        log.info("上传头像类型:"+type);
-        log.info("上传头像路径:"+path+":"+fileName);
-        log.info("保存头像路径:"+savePath+":"+savePath);
+        log.info("上传头像类型:" + type);
+        log.info("上传头像路径:" + path + "\\" + fileName);
+        log.info("保存头像路径:" + savePath);
 
         JSONObject joData = (JSONObject) JSONObject.parse(avatar_data);
         // 用户经过剪辑后的图片的大小
@@ -74,21 +78,22 @@ public class UserController extends BasicController{
         try {
             if(!targetFile.exists()){
                 targetFile.mkdirs();
-                InputStream is = avatar_file.getInputStream();
-                ImageCut.cut(is, targetFile, (int)x,(int)y,(int)w,(int)h);
-                userService.saveImagePath(redisService.getSessionUserId(request.getRequestedSessionId()),
-                        savePath, request.getRequestedSessionId());
-                is.close();
             }
+            InputStream is = avatar_file.getInputStream();
+            ImageCut.cut(is, targetFile, (int)x,(int)y,(int)w,(int)h);
+            userService.saveImagePath(redisService.getSession(request.getRequestedSessionId()), savePath);
+            is.close();
         } catch (Exception e) {
             e.printStackTrace();
             throw new BasicRuntimeException("上传失败，出现异常");
         }
+        log.info("上传用户头像结束-----");
         return request.getSession().getServletContext().getContextPath()+dir+fileName;
     }
 
     @RequestMapping(value = "detail", method = RequestMethod.GET)
     public UserInfo detail(){
-        return userService.getUserInfo(request.getRequestedSessionId());
+        String userId = redisService.getSessionUserId(request.getRequestedSessionId());
+        return userService.getUserInfo(userId);
     }
 }

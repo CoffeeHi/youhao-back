@@ -2,14 +2,12 @@ package com.chenx.service.login.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.chenx.YouHaoConstant;
-import com.chenx.dao.dto.ValidateLoginDto;
+import com.chenx.model.dto.ValidateLoginDto;
 import com.chenx.gateway.commons.CommonErrCode;
 import com.chenx.model.User;
 import com.chenx.service.login.ILoginService;
 import com.chenx.service.redis.IRedisService;
-import com.chenx.utils.MapUtils;
 import com.chenx.utils.SHA1Util;
-import com.chenx.utils.UUIDUtils;
 import com.chenx.utils.dto.SessionInfo;
 import com.fjhb.commons.dao.template.RedisDaoTemplate;
 import com.fjhb.commons.exception.BasicRuntimeException;
@@ -47,8 +45,8 @@ public class LoginServiceImpl implements ILoginService {
             throw new BasicRuntimeException("用户名或密码错误");
         }
         User user = sqlSessionTemplate.selectOne("login.selectUserInfo", userId);
-        SessionInfo sessionInfo = new SessionInfo(user.getUserId(), user.getUserName(),
-                user.getUserImage(), YouHaoConstant.LOGIN_TYPE_FRONT);
+        SessionInfo sessionInfo = new SessionInfo(sessionId, user.getId(), user.getName(),
+                user.getImage(), YouHaoConstant.LOGIN_TYPE_FRONT);
         //设置Session过期1小时
         redisService.saveValue(JSON.toJSONString(sessionInfo), sessionId, TimeUnit.HOURS, 1);
         return sessionInfo;

@@ -11,9 +11,9 @@
     </select>
 
     <select id="selectUserInfo" parameterType="String" resultType="user">
-        SELECT 	user_id AS userId, user_name AS userName, user_image AS userImage,
-        user_signature AS userSignature, user_address AS userAddress, user_job AS userJob,
-        user_introduce AS userIntroduce, user_evaluation AS userEvaluation FROM user_info WHERE user_id=#{userId};
+        SELECT 	user_id AS id, user_name AS name, user_image AS image,
+        user_signature AS signature, user_address AS address, user_job AS job,
+        user_introduce AS introduce, user_evaluation AS evaluation FROM user_info WHERE user_id=#{userId};
     </select>
 
 </mapper>

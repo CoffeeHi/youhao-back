@@ -27,7 +27,7 @@
         user_image,
         user_evaluation
         )
-        VALUES (#{userId},#{userName},#{userImage},#{userEvaluation})
+        VALUES (#{id},#{name},#{image},#{evaluation})
     </insert>
 
 

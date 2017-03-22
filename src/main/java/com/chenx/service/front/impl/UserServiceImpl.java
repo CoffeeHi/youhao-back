@@ -9,6 +9,7 @@ import com.chenx.service.redis.IRedisService;
 import com.chenx.utils.dto.SessionInfo;
 import com.fjhb.commons.exception.BasicRuntimeException;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -24,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 @Service("userService")
 public class UserServiceImpl implements IUserService {
 
-    @Resource
+    @Autowired
     private SqlSessionTemplate sqlSessionTemplate;
 
     @Resource(name = "redisService")
@@ -32,41 +33,32 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     @Transactional
-    public int editUserInfo(EditUserInfo editUserInfo, String sessionId) {
-        String userId = redisService.getSessionUserId(sessionId);
-        editUserInfo.setId(userId);
+    public int editUserInfo(EditUserInfo editUserInfo, SessionInfo sessionInfo) {
         int num = sqlSessionTemplate.update("user.editUserInfo", editUserInfo);
         if (num == 1){
-            SessionInfo sessionInfo = redisService.getSession(sessionId);
             if (StringUtils.isEmpty(sessionInfo)){
                 throw new BasicRuntimeException(new CommonErrCode("401", "用户未登录或登录超时"));
             }
             sessionInfo.setUserName(editUserInfo.getName());
-            redisService.saveValue(JSON.toJSONString(sessionInfo), sessionId, TimeUnit.HOURS, 1);
+            redisService.saveValue(JSON.toJSONString(sessionInfo), sessionInfo.getSessionId(), TimeUnit.HOURS, 1);
         }
         return num;
     }
 
     @Override
-    public UserInfo getUserInfo(String sessionId) {
-        String userId = redisService.getSessionUserId(sessionId);
+    public UserInfo getUserInfo(String userId) {
         return sqlSessionTemplate.selectOne("user.getUserInfo", userId);
     }
 
     @Override
-    public int saveImagePath(String userId, String imagePath, String sessionId) {
+    @Transactional
+    public int saveImagePath(SessionInfo sessionInfo, String imagePath) {
         Map param = new HashMap<>();
-        param.put("userId", userId);
+        param.put("userId", sessionInfo.getUserId());
         param.put("imagePath", imagePath);
         int num = sqlSessionTemplate.update("user.updateUserImage", param);
-        if (num == 1){
-            SessionInfo sessionInfo = redisService.getSession(sessionId);
-            if (StringUtils.isEmpty(sessionInfo)){
-                throw new BasicRuntimeException(new CommonErrCode("401", "用户未登录或登录超时"));
-            }
-            sessionInfo.setUserImage(imagePath);
-            redisService.saveValue(JSON.toJSONString(sessionInfo), sessionId, TimeUnit.HOURS, 1);
-        }
+        sessionInfo.setUserImage(imagePath);
+        redisService.saveValue(JSON.toJSONString(sessionInfo), sessionInfo.getSessionId(), TimeUnit.HOURS, 1);
         return num;
     }
 }
