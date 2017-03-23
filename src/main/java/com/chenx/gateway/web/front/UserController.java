@@ -36,7 +36,7 @@ public class UserController extends BasicController{
     @Resource(name = "redisService")
     private IRedisService redisService;
 
-    @RequestMapping(value = "edit", method = RequestMethod.PUT)
+    @RequestMapping(method = RequestMethod.PUT)
     public int edit(@RequestBody EditUserInfo editUserInfo){
         SessionInfo sessionInfo = redisService.getSession(request.getRequestedSessionId());
         editUserInfo.setId(sessionInfo.getUserId());
@@ -91,7 +91,7 @@ public class UserController extends BasicController{
         return request.getSession().getServletContext().getContextPath()+dir+fileName;
     }
 
-    @RequestMapping(value = "detail", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public UserInfo detail(){
         String userId = redisService.getSessionUserId(request.getRequestedSessionId());
         return userService.getUserInfo(userId);

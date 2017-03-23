@@ -33,11 +33,15 @@ public class TestMongo {
 
     @Test
     public void testMongoLink(){
-        Tour t = new Tour();
-        t.setId(UUIDUtils.getUUID());
-        t.setDateStart(new Date());
-        t.setDateOver(new Date());
-        System.out.println(tourService.insertTour(t, "C54429D6383118AFD8DAE375340E92D2"));
+//        Tour t = new Tour();
+//        t.setId(UUIDUtils.getUUID());
+//        t.setDateStart(new Date());
+//        t.setDateOver(new Date());
+//        System.out.println(tourService.insertTour(t, "C54429D6383118AFD8DAE375340E92D2"));
+
+        String tourId = "580ddb43430a453c89ab34611f1d6841";
+        tourService.getTour(tourId);
+
 //        log.info(mongo.getCollection("travel").count());
 //        log.info(mongo.findById("5863d41591b2fc5404835d51", Tour.class));
 //        int i = 10;

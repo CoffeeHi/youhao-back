@@ -4,14 +4,19 @@ import com.chenx.YouHaoConstant;
 import com.chenx.model.Tour;
 import com.chenx.model.TourState;
 import com.chenx.model.TourUserState;
+import com.chenx.model.UserInfo;
+import com.chenx.model.dto.TourDetail;
 import com.chenx.service.front.ITourService;
 import com.chenx.service.redis.IRedisService;
 import com.chenx.utils.UUIDUtils;
+import com.fjhb.commons.exception.BasicRuntimeException;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -43,7 +48,7 @@ public class TourServiceImpl implements ITourService {
         tour.setId(tourId);
         tour.setPostTime(postTime);
         tour.setAuthor(userId);
-        mongo.save(tour, "tour");
+        mongo.save(tour);
         //记录旅单状态
         TourState ts = new TourState();
         ts.setTourId(tourId);
@@ -57,5 +62,24 @@ public class TourServiceImpl implements ITourService {
         tus.setUserState(YouHaoConstant.TOUR_USER_STATE_JOIN);
         sqlSessionTemplate.insert("tour.initTourUserState", tus);
         return tourId;
+    }
+
+    @Override
+    public TourDetail getTour(String tourId) {
+        Tour tour = mongo.findById(tourId, Tour.class);
+        if (StringUtils.isEmpty(tour)){
+            throw new BasicRuntimeException("该旅单不存在");
+        }
+        TourDetail tourDetail = new TourDetail();
+        BeanUtils.copyProperties(tour, tourDetail);
+
+        TourState tourState = sqlSessionTemplate.selectOne("tour.getTourState", tourId);
+        BeanUtils.copyProperties(tourState, tourDetail);
+
+        UserInfo userInfo = sqlSessionTemplate.selectOne("user.getUserInfo", tour.getAuthor());
+        tourDetail.setAuthorImage(userInfo.getImage());
+        tourDetail.setAuthorName(userInfo.getName());
+        tourDetail.setAuthorIntro(userInfo.getIntro());
+        return tourDetail;
     }
 }

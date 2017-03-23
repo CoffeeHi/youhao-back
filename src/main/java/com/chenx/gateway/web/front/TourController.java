@@ -3,6 +3,7 @@ package com.chenx.gateway.web.front;
 import com.chenx.YouHaoConstant;
 import com.chenx.gateway.commons.BasicController;
 import com.chenx.model.Tour;
+import com.chenx.model.dto.TourDetail;
 import com.chenx.service.front.ITourService;
 import com.chenx.service.redis.IRedisService;
 import com.chenx.utils.UUIDUtils;
@@ -29,8 +30,8 @@ public class TourController extends BasicController {
     @Resource(name = "tourService")
     private ITourService tourService;
 
-    @RequestMapping(value = "insert", method = RequestMethod.POST)
-    public String edit(@RequestBody Tour tour){ //返回旅单id
+    @RequestMapping(method = RequestMethod.POST)
+    public String insert(@RequestBody Tour tour){ //返回旅单id
         String userId = redisService.getSessionUserId(request.getRequestedSessionId());
         return tourService.insertTour(tour, userId);
     }

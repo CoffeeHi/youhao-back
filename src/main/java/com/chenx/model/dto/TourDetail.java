@@ -1,24 +1,15 @@
-package com.chenx.model;
+package com.chenx.model.dto;
 
-import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by Administrator on 2016/11/17 0017.
+ * Created by Administrator on 2017/3/22 0022.
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Document(collection = "tour")
-public class Tour implements Serializable {
-
-    @Id
-    @GenericGenerator(name = "_id", strategy = "uuid.hex")
+public class TourDetail implements Serializable {
     private String id;
 
     /**目的地**/
@@ -54,7 +45,24 @@ public class Tour implements Serializable {
     /**发布时间**/
     private Date postTime;
 
-    /**发布者**/
-    private String author;
+//    下面的从tour_state表查------------------------------------------------
 
+    /**当前游客数量**/
+    private int tourists;
+
+    private long goods;
+
+    private long coms;
+
+    private long looks;
+
+    /**旅单状态(0-拼团中，1-已组团，2-进行中，3-已完成，4-已解散)**/
+    private int state;
+
+//    发布者信息-----------------------------
+    private String authorName;
+
+    private String authorImage;
+
+    private String authorIntro;
 }

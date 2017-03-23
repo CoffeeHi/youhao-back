@@ -14,7 +14,7 @@
 	<context:component-scan base-package="com.chenx.gateway.web.portal" />
 
 	<!--指定图片路径-->
-	<mvc:resources mapping="/image/**" location="/image/"/>
+	<mvc:resources mapping="/images/**" location="/images/"/>
 
 	<!-- 全局的拦截器用于响应头增加跨域和编码支持 -->
 	<mvc:interceptors>

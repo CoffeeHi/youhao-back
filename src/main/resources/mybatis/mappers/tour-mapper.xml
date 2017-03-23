@@ -12,7 +12,7 @@
 		INSERT INTO tour_state
 		(ts_id,
 		ts_tour_id,
-		ts_users,
+		ts_tourists,
 		ts_looks,
 		ts_coms,
 		ts_goods,
@@ -21,7 +21,7 @@
 		VALUES
 		(#{id},
 		#{tourId},
-		#{users},
+		#{tourists},
 		#{looks},
 		#{coms},
 		#{goods},
@@ -51,4 +51,18 @@
 		);
 	</insert>
 
+	<select id="getTourState" parameterType="String" resultType="tourState">
+		SELECT
+		ts_id AS id,
+	ts_tour_id AS tourId,
+	ts_tourists AS tourists,
+	ts_looks AS looks,
+	ts_coms AS coms,
+	ts_goods AS goods,
+	ts_state AS state
+	FROM
+	tour_state
+	WHERE
+	ts_tour_id = #{tourId}
+	</select>
 </mapper>
