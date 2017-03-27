@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.fjhb.commons.dao.page.Page;
+import com.chenx.utils.Page;
 import com.fjhb.fastJson.AmendJSON;
 import lombok.Setter;
 import org.apache.commons.io.IOUtils;
@@ -30,8 +30,6 @@ import java.util.Collection;
 /**
  * 将返回值用{status:true,info:returnValue}包起来
  * 并且把Date类型值输出时可以设置format,默认为"yyyy-MM-dd HH:mm:ss"
- * @author huanghj
- *
  */
 @Setter
 public class WrappedFastJsonHttpMessageConverter extends

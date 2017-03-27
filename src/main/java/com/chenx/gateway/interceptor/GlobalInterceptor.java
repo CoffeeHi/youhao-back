@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 全局的拦截器,拦截所有的spring mvc的请求
- * @author huanghj
- *
  */
 public class GlobalInterceptor extends HandlerInterceptorAdapter {
 	@Override

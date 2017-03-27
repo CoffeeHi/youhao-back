@@ -35,8 +35,6 @@ import java.util.stream.Collectors;
 /**
  * 在针对json格式返回的业务方法有异常时,统一用{status:false,info:异常信息}
  * 并且对请求信息请求debug级别的打印
- * @author huanghj
- *
  */
 @Log4j
 public class WrappedHandlerExceptionResolver extends DefaultHandlerExceptionResolver {

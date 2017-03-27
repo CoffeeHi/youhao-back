@@ -65,4 +65,51 @@
 	WHERE
 	ts_tour_id = #{tourId}
 	</select>
+
+	<insert id="joinTour" parameterType="tourUserState">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select replace(uuid(),'-','') from dual
+		</selectKey>
+		INSERT INTO tour_user_state
+	(tus_id,
+	tus_tour_id,
+	tus_user_id,
+	tus_user_state,
+	tus_user_role,
+	tus_user_jointime
+	)
+	VALUES
+	(#{id},
+	#{tourId},
+	#{userId},
+	#{userState},
+	#{userRole},
+	#{userJoinTime}
+	);
+	</insert>
+
+	<select id="checkTourUser" parameterType="map" resultType="String">
+		SELECT tus_id FROM tour_user_state WHERE tus_tour_id = #{tourId} AND tus_user_id = #{userId};
+	</select>
+
+	<select id="getTourists" parameterType="String" resultType="tourUser">
+		SELECT ui.user_id AS userId, ui.user_name AS userName, ui.user_image AS userImage, tus.tus_user_role AS userRole
+		FROM user_info ui INNER JOIN tour_user_state tus
+		ON ui.user_id = tus.tus_user_id  AND tus.tus_user_state = '0' AND tus.tus_tour_id = #{tourId};
+	</select>
+
+	<delete id="exitTour" parameterType="map">
+		DELETE FROM tour_user_state WHERE tus_tour_id = #{tourId} AND
+		tus_user_id = #{userId};
+	</delete>
+
+	<select id="getTourAuthors" resultType="author">
+		SELECT user_id AS userId, user_name AS userName,
+		user_image AS userImage, user_signature AS userSig FROM user_info WHERE user_id IN
+		<foreach collection="list" item="id"
+				 index="index" open="(" close=")" separator=",">
+			#{id}
+		</foreach>
+	</select>
+
 </mapper>

@@ -1,6 +1,10 @@
+import com.chenx.model.TourUserState;
+import com.chenx.model.dto.Author;
+import com.chenx.model.dto.TourUser;
 import com.chenx.model.dto.ValidateLoginDto;
 import com.chenx.model.dto.EditUserInfo;
 import com.chenx.model.User;
+import com.chenx.service.front.ITourService;
 import com.chenx.service.redis.IRedisService;
 import com.chenx.utils.SHA1Util;
 import com.chenx.utils.UUIDUtils;
@@ -12,7 +16,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,13 +26,16 @@ import java.util.Map;
  */
 @RunWith(SpringJUnit4ClassRunner.class)     //表示继承了SpringJUnit4ClassRunner类
 @ContextConfiguration(locations = {"classpath:spring/spring-annotation.xml","classpath:spring/spring-mybatis.xml",
-        "classpath:spring/spring-datasource.xml","classpath:spring/spring-sys-properties.xml",
+        "classpath:spring/spring-datasource.xml","classpath:spring/spring-data-mongodb.xml","classpath:spring/spring-sys-properties.xml",
         "classpath:spring/spring-data-redis.xml"})
 @Log4j
 public class TestMyBatis{
 
     @Resource(name = "redisService")
     private IRedisService redisService;
+
+    @Resource(name = "tourService")
+    private ITourService tourService;
 
     @Resource
     private SqlSessionTemplate sqlSessionTemplate;
@@ -44,13 +53,26 @@ public class TestMyBatis{
 //        a.setRegTime(new Date());
 //        log.info(sqlSessionTemplate.insert("register.registerAccount", a));
 
-        User user = new User();
-        String userId = UUIDUtils.getUUID();
-        user.setName("88888888888");
-        user.setId(userId);
-        user.setImage("images/pp.jpg");
-        user.setEvaluation(1);
-        sqlSessionTemplate.insert("register.createUser",user); //创建用户
+//        User user = new User();
+//        String userId = UUIDUtils.getUUID();
+//        user.setName("88888888888");
+//        user.setId(userId);
+//        user.setImage("images/pp.jpg");
+//        user.setEvaluation(1);
+//        sqlSessionTemplate.insert("register.createUser",user); //创建用户
+
+
+//        TourUserState tourUserState = new TourUserState();
+//        tourUserState.setId(UUIDUtils.getUUID());
+//        tourUserState.setTourId("fff6dabb530341f4ae71fac30e590dd6");
+//        tourUserState.setUserRole(1);
+//        tourUserState.setUserJoinTime(new Date());
+//        tourUserState.setUserState(0);
+//        tourUserState.setUserId("21a03452b0ac4dc398fa659adcf2cfbe");
+////        sqlSessionTemplate.insert("tour.joinTour", tourUserState);
+//        tourService.joinTour(tourUserState);
+
+        List<TourUser> tourUserList = sqlSessionTemplate.selectList("tour.getTourists", "ebe11ea58d5a41a1870435e6b857d355");
     }
 
     @Test
@@ -58,9 +80,17 @@ public class TestMyBatis{
 //        User user = sqlSessionTemplate.selectOne("login.selectUserInfo", "e8d451e450874cb481f87ef5f5ea69d2");
 //        log.info(user.toString());
 
-        ValidateLoginDto va = new ValidateLoginDto("150", SHA1Util.getSHA1("666"), 1);
-        String id = sqlSessionTemplate.selectOne("login.validateLogin", va);
-        System.out.println(id);
+//        ValidateLoginDto va = new ValidateLoginDto("150", SHA1Util.getSHA1("666"), 1);
+//        String id = sqlSessionTemplate.selectOne("login.validateLogin", va);
+//        System.out.println(id);
+
+//        Map param = new HashMap<>();
+//        param.put("userId" , "34e1ff8be20449f29e6c27a0af29abac");
+//        param.put("tourId" , "ebe11ea58d5a41a1870435e6b857d355");
+//        sqlSessionTemplate.update("tour.exitTour", param);
+
+
+
     }
 
     @Test

@@ -8,10 +8,6 @@ import org.springframework.util.Assert;
 
 import java.nio.charset.Charset;
 
-/**
- * @author choaklin
- * @since 2016/9/8
- */
 public class FastJsonRedisSerializer implements RedisSerializer<Object> {
 
     private final Charset charset;

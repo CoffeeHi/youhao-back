@@ -6,11 +6,11 @@ import org.apache.ibatis.type.Alias;
 import java.io.Serializable;
 
 /**
- * Created by Administrator on 2017/3/22 0022.
+ * Created by Administrator on 2017/3/24 0024.
  */
 @Data
-@Alias("author")
-public class Author implements Serializable {
+@Alias("tourUser")
+public class TourUser implements Serializable {
 
     private String userId;
 
@@ -18,5 +18,5 @@ public class Author implements Serializable {
 
     private String userImage;
 
-    private String userSig;
+    private int userRole;
 }

@@ -5,25 +5,31 @@ import com.chenx.model.Tour;
 import com.chenx.model.TourState;
 import com.chenx.model.TourUserState;
 import com.chenx.model.UserInfo;
-import com.chenx.model.dto.TourDetail;
+import com.chenx.model.dto.*;
 import com.chenx.service.front.ITourService;
 import com.chenx.service.redis.IRedisService;
+import com.chenx.utils.Page;
 import com.chenx.utils.UUIDUtils;
 import com.fjhb.commons.exception.BasicRuntimeException;
+import lombok.extern.log4j.Log4j;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
-import java.util.Date;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by Administrator on 2017/3/21 0021.
  */
+@Log4j
 @Service("tourService")
 public class TourServiceImpl implements ITourService {
 
@@ -81,5 +87,72 @@ public class TourServiceImpl implements ITourService {
         tourDetail.setAuthorName(userInfo.getName());
         tourDetail.setAuthorIntro(userInfo.getIntro());
         return tourDetail;
+    }
+
+    @Override
+    @Transactional
+    public int joinTour(TourUserState tourUserState) {
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put("tourId", tourUserState.getTourId());
+        paramMap.put("userId", tourUserState.getUserId());
+        List<String> tourList = sqlSessionTemplate.selectList("tour.checkTourUser", paramMap);
+        if (tourList != null && tourList.size() > 0){
+            throw new BasicRuntimeException("你已经加入过该旅单");
+        }
+        sqlSessionTemplate.insert("tour.joinTour", tourUserState);
+        return tourUserState.getUserRole();
+    }
+
+    @Override
+    public TourTourists getTourists(String tourId, String userId) {
+        TourTourists tourTourists = new TourTourists();
+        List<TourUser> tourUsers = sqlSessionTemplate.selectList("tour.getTourists", tourId);
+        tourTourists.setTourUsers(tourUsers);
+        tourTourists.setIfJoin(false);
+        for (TourUser tu : tourUsers){
+            if (tu.getUserId().equals(userId)){
+                tourTourists.setIfJoin(true);
+                break;
+            }
+        }
+        return tourTourists;
+    }
+
+    @Override
+    public int exitTour(String tourId, String userId) {
+        Map param = new HashMap<>();
+        param.put("userId" , userId);
+        param.put("tourId" , tourId);
+        return sqlSessionTemplate.delete("tour.exitTour", param);
+    }
+
+    @Override
+    public Page getTourPage(int pageNo, int pageSize) {
+        log.info("--------mongo1--" + System.currentTimeMillis());
+        List<Tour> tourList = mongo.find(new Query().skip(pageSize * (pageNo-1)).limit(pageSize).with(new Sort(new Sort.Order(Sort.Direction.DESC, "postTime"))), Tour.class);
+        log.info("--------mongo2--" + System.currentTimeMillis());
+        List<String> authorIds = tourList.stream().map(i -> i.getAuthor()).collect(Collectors.toList());
+        log.info("--------mysql1--" + System.currentTimeMillis());
+        List<Author> authors = sqlSessionTemplate.selectList("tour.getTourAuthors", authorIds);
+        log.info("--------mysql2--" + System.currentTimeMillis());
+        Map<String, Author> authorMap = authors.stream().collect(Collectors.toMap(Author::getUserId, (p) -> p));
+        log.info("--------mapping1--" + System.currentTimeMillis());
+        List<TourSimple> ts = new ArrayList<>();
+        for (Tour t : tourList){
+            TourSimple tsTmp = new TourSimple();
+            BeanUtils.copyProperties(t, tsTmp);
+            Author a = authorMap.get(t.getAuthor());
+            BeanUtils.copyProperties(a, tsTmp);
+            ts.add(tsTmp);
+        }
+        log.info("--------mapping2--" + System.currentTimeMillis());
+        Page page = new Page();
+        page.setPageNo(pageNo);
+        page.setPageSize(pageSize);
+        page.setCurrentPageData(ts);
+        log.info("--------mongo Total_1--" + System.currentTimeMillis());
+        page.setTotalSize(mongo.count(new Query(), Tour.class));
+        log.info("--------mongo Total_2--" + System.currentTimeMillis());
+        return page;
     }
 }

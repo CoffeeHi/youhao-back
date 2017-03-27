@@ -3,7 +3,9 @@ package com.chenx.gateway.web.portal;
 import com.chenx.gateway.commons.BasicController;
 import com.chenx.model.Tour;
 import com.chenx.model.dto.TourDetail;
+import com.chenx.model.dto.TourSimple;
 import com.chenx.service.front.ITourService;
+import com.chenx.utils.Page;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,8 +27,9 @@ public class TourController extends BasicController {
     @Resource(name = "tourService")
     private ITourService tourService;
 
-    @RequestMapping(value = "{tourId}", method = RequestMethod.GET)
-    public TourDetail get(@PathVariable String tourId){
-        return tourService.getTour(tourId);
+
+    @RequestMapping(value = "page/{pageNo}/{pageSize}", method = RequestMethod.GET)
+    public Page getTourPage(@PathVariable int pageNo,@PathVariable int pageSize){
+        return tourService.getTourPage(pageNo, pageSize);
     }
 }
