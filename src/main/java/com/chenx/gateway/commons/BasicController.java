@@ -1,5 +1,7 @@
 package com.chenx.gateway.commons;
 
+import com.alibaba.fastjson.JSON;
+import com.fjhb.commons.util.BeanUtil;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +15,11 @@ public abstract class BasicController {
     protected HttpServletRequest request;
     protected HttpServletResponse response;
     protected HttpSession session;
+
+    protected <T>T getRequestParam(Class<T> clazz){
+        String requestString = request.getParameter("requestString");
+        return JSON.parseObject(requestString, clazz);
+    }
 
     @ModelAttribute
     public void setReqAndRes(HttpServletRequest request, HttpServletResponse response){

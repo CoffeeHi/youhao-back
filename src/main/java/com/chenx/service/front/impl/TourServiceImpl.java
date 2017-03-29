@@ -1,6 +1,7 @@
 package com.chenx.service.front.impl;
 
 import com.chenx.YouHaoConstant;
+import com.chenx.gateway.web.portal.dto.TourQuery;
 import com.chenx.model.Tour;
 import com.chenx.model.TourState;
 import com.chenx.model.TourUserState;
@@ -17,6 +18,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,9 +40,6 @@ public class TourServiceImpl implements ITourService {
 
     @Autowired
     private SqlSessionTemplate sqlSessionTemplate;
-
-    @Resource(name = "redisService")
-    private IRedisService redisService;
 
 //    在单独使用不带任何参数的 @Transactional 注释时，传播模式要设置为 REQUIRED，
 // 只读标志设置为 false，事务隔离级别设置为 READ_COMMITTED，
@@ -127,32 +126,48 @@ public class TourServiceImpl implements ITourService {
     }
 
     @Override
-    public Page getTourPage(int pageNo, int pageSize) {
+    public Page getTourPage(int pageNo, int pageSize, TourQuery tourQuery) {
         log.info("--------mongo1--" + System.currentTimeMillis());
-        List<Tour> tourList = mongo.find(new Query().skip(pageSize * (pageNo-1)).limit(pageSize).with(new Sort(new Sort.Order(Sort.Direction.DESC, "postTime"))), Tour.class);
-        log.info("--------mongo2--" + System.currentTimeMillis());
-        List<String> authorIds = tourList.stream().map(i -> i.getAuthor()).collect(Collectors.toList());
-        log.info("--------mysql1--" + System.currentTimeMillis());
-        List<Author> authors = sqlSessionTemplate.selectList("tour.getTourAuthors", authorIds);
-        log.info("--------mysql2--" + System.currentTimeMillis());
-        Map<String, Author> authorMap = authors.stream().collect(Collectors.toMap(Author::getUserId, (p) -> p));
-        log.info("--------mapping1--" + System.currentTimeMillis());
-        List<TourSimple> ts = new ArrayList<>();
-        for (Tour t : tourList){
-            TourSimple tsTmp = new TourSimple();
-            BeanUtils.copyProperties(t, tsTmp);
-            Author a = authorMap.get(t.getAuthor());
-            BeanUtils.copyProperties(a, tsTmp);
-            ts.add(tsTmp);
+//        List<Tour> tourList = mongo.find(new Query().skip(pageSize * (pageNo-1)).limit(pageSize).with(new Sort(new Sort.Order(Sort.Direction.DESC, "postTime"))), Tour.class);
+        Query mongoQuery = new Query();
+        if (!StringUtils.isEmpty(tourQuery.getTarget())){
+            mongoQuery.addCriteria(Criteria.where("target").regex("^.*" + tourQuery.getTarget() + ".*$"));
         }
-        log.info("--------mapping2--" + System.currentTimeMillis());
+        if (!StringUtils.isEmpty(tourQuery.getDateStart())){
+            mongoQuery.addCriteria(Criteria.where("dateStart").gte(tourQuery.getDateStart()));
+        }
+        if (!StringUtils.isEmpty(tourQuery.getDateOver())){
+            mongoQuery.addCriteria(Criteria.where("dateOver").lte(tourQuery.getDateOver()));
+        }
+        List<Tour> tourList = mongo.find(mongoQuery.skip(pageSize * (pageNo-1)).limit(pageSize).with(new Sort(new Sort.Order(Sort.Direction.DESC, "postTime"))), Tour.class);
+        log.info("--------mongo2--" + System.currentTimeMillis());
+
         Page page = new Page();
         page.setPageNo(pageNo);
         page.setPageSize(pageSize);
-        page.setCurrentPageData(ts);
-        log.info("--------mongo Total_1--" + System.currentTimeMillis());
-        page.setTotalSize(mongo.count(new Query(), Tour.class));
-        log.info("--------mongo Total_2--" + System.currentTimeMillis());
+        if(tourList.size() >0){
+            List<String> authorIds = tourList.stream().map(i -> i.getAuthor()).collect(Collectors.toList());
+            log.info("--------mysql1--" + System.currentTimeMillis());
+            List<Author> authors = sqlSessionTemplate.selectList("tour.getTourAuthors", authorIds);
+            log.info("--------mysql2--" + System.currentTimeMillis());
+            Map<String, Author> authorMap = authors.stream().collect(Collectors.toMap(Author::getUserId, (p) -> p));
+            log.info("--------mapping1--" + System.currentTimeMillis());
+            List<TourSimple> ts = new ArrayList<>();
+            for (Tour t : tourList){
+                TourSimple tsTmp = new TourSimple();
+                BeanUtils.copyProperties(t, tsTmp);
+                Author a = authorMap.get(t.getAuthor());
+                BeanUtils.copyProperties(a, tsTmp);
+                ts.add(tsTmp);
+            }
+            log.info("--------mapping2--" + System.currentTimeMillis());
+            page.setCurrentPageData(ts);
+            log.info("--------mongo Total_1--" + System.currentTimeMillis());
+            page.setTotalSize(mongo.count(new Query(), Tour.class));
+            log.info("--------mongo Total_2--" + System.currentTimeMillis());
+        }else {
+            page.setTotalSize(0);
+        }
         return page;
     }
 }

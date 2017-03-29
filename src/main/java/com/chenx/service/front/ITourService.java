@@ -1,5 +1,6 @@
 package com.chenx.service.front;
 
+import com.chenx.gateway.web.portal.dto.TourQuery;
 import com.chenx.model.Tour;
 import com.chenx.model.TourUserState;
 import com.chenx.model.dto.TourDetail;
@@ -15,5 +16,5 @@ public interface ITourService {
     int joinTour(TourUserState tourUserState);
     TourTourists getTourists(String tourId, String userId);
     int exitTour(String tourId, String userId);
-    Page getTourPage(int pageNo, int pageSize);
+    Page getTourPage(int pageNo, int pageSize, TourQuery tourQuery);
 }

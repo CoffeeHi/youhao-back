@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="comment">
+
+    <insert id="insertCom" parameterType="comment">
+		<selectKey keyProperty="comId" resultType="String" order="BEFORE">
+			select replace(uuid(),'-','') from dual
+		</selectKey>
+		INSERT INTO com
+		(com_id,
+		com_target,
+		com_type,
+		com_content,
+		com_parent,
+		com_author,
+		com_time,
+		com_goods
+		)
+		VALUES
+		(#{comId},
+		#{comTarget},
+		#{comType},
+		#{comContent},
+		#{comParent},
+		#{comAuthor},
+		#{comTime},
+		#{comGoods}
+		);
+	</insert>
+
+	<select id="selectFirstComs" parameterType="map" resultType="comList">
+	SELECT 	co.com_id AS comId,
+	co.com_target AS comTarget,
+	co.com_type AS comType,
+	co.com_content AS comContent,
+	co.com_parent AS comParent,
+	co.com_time AS comTime,
+	co.com_goods AS comGoods,
+	ui.user_id AS comAuthor,
+	ui.user_name AS comAuthorName,
+	ui.user_image AS comAuthorImg
+	FROM
+	com co
+	INNER JOIN
+	user_info ui
+	WHERE co.com_author = ui.user_id AND co.com_target = #{tourId}
+	AND co.com_type = 1 AND co.com_parent = '' ORDER BY co.com_time
+	LIMIT #{limit} OFFSET #{offset};
+	</select>
+
+	<select id="getComTotal" parameterType="String" resultType="long">
+		SELECT COUNT(1)  FROM com WHERE com_target = #{tourId} AND com_type=1 AND com_parent != '' ;
+	</select>
+
+	<select id="selectSecComs" resultType="comList">
+		SELECT 	co.com_id AS comId,
+		co.com_target AS comTarget,
+		co.com_type AS comType,
+		co.com_content AS comContent,
+		co.com_parent AS comParent,
+		co.com_time AS comTime,
+		co.com_goods AS comGoods,
+		ui.user_id AS comAuthor,
+		ui.user_name AS comAuthorName,
+		ui.user_image AS comAuthorImg
+		FROM
+		com co
+		INNER JOIN
+		user_info ui
+		WHERE co.com_author = ui.user_id AND co.com_parent IN
+		<foreach collection="list" item="id"
+				 index="index" open="(" close=")" separator=",">
+			#{id}
+		</foreach>
+		ORDER BY co.com_time;
+	</select>
+
+	<delete id="deleteCom" parameterType="map">
+		DELETE FROM com WHERE com_id = #{comId} AND com_author=#{userId};
+	</delete>
+
+	<delete id="deleteChildCom" parameterType="String">
+		DELETE FROM com WHERE com_parent = #{comId};
+	</delete>
+</mapper>

@@ -1,6 +1,8 @@
 package com.chenx.gateway.web.portal;
 
+import com.alibaba.fastjson.JSON;
 import com.chenx.gateway.commons.BasicController;
+import com.chenx.gateway.web.portal.dto.TourQuery;
 import com.chenx.model.Tour;
 import com.chenx.model.dto.TourDetail;
 import com.chenx.model.dto.TourSimple;
@@ -8,10 +10,7 @@ import com.chenx.service.front.ITourService;
 import com.chenx.utils.Page;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -28,8 +27,12 @@ public class TourController extends BasicController {
     private ITourService tourService;
 
 
+
     @RequestMapping(value = "page/{pageNo}/{pageSize}", method = RequestMethod.GET)
-    public Page getTourPage(@PathVariable int pageNo,@PathVariable int pageSize){
-        return tourService.getTourPage(pageNo, pageSize);
+    public Page getTourPage(@PathVariable int pageNo, @PathVariable int pageSize){
+        TourQuery tourQuery = super.getRequestParam(TourQuery.class);
+        return tourService.getTourPage(pageNo, pageSize, tourQuery);
     }
+
+
 }

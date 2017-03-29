@@ -1,3 +1,4 @@
+import com.chenx.model.Comment;
 import com.chenx.model.TourUserState;
 import com.chenx.model.dto.Author;
 import com.chenx.model.dto.TourUser;
@@ -72,7 +73,10 @@ public class TestMyBatis{
 ////        sqlSessionTemplate.insert("tour.joinTour", tourUserState);
 //        tourService.joinTour(tourUserState);
 
-        List<TourUser> tourUserList = sqlSessionTemplate.selectList("tour.getTourists", "ebe11ea58d5a41a1870435e6b857d355");
+//        List<TourUser> tourUserList = sqlSessionTemplate.selectList("tour.getTourists", "ebe11ea58d5a41a1870435e6b857d355");
+
+        Comment com = new Comment();
+        sqlSessionTemplate.insert("comment.insertCom", com);
     }
 
     @Test
@@ -117,6 +121,6 @@ public class TestMyBatis{
 
     @Test
     public void testRedis(){
-        System.out.println("");
+        sqlSessionTemplate.selectOne("comment.getComTotal", "f36a3d60bf2548ac8381ecdec2aea76c");
     }
 }
