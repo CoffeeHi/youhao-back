@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="blog">
+
+	<insert id="insert" parameterType="blog">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select replace(uuid(),'-','') from dual
+		</selectKey>
+		INSERT INTO social_blog
+		(art_id,
+		art_title,
+		art_content,
+		art_author,
+		art_time
+		)
+		VALUES
+		(#{id},
+		#{title},
+		#{content},
+		#{author},
+		#{postTime}
+		);
+	</insert>
+</mapper>
