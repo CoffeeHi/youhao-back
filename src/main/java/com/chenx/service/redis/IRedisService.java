@@ -2,6 +2,7 @@ package com.chenx.service.redis;
 
 import com.chenx.utils.dto.SessionInfo;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -52,4 +53,7 @@ public interface IRedisService {
      */
     SessionInfo getSession(String sessionId);
 
+    void addList(String key, String item);
+
+    List<String> getList(String key, int pageNo, int pageSize);
 }

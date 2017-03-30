@@ -12,6 +12,7 @@
 		INSERT INTO tour_state
 		(ts_id,
 		ts_tour_id,
+		ts_tourist_num,
 		ts_tourists,
 		ts_looks,
 		ts_coms,
@@ -21,6 +22,7 @@
 		VALUES
 		(#{id},
 		#{tourId},
+		#{touristNum},
 		#{tourists},
 		#{looks},
 		#{coms},
@@ -55,6 +57,7 @@
 		SELECT
 		ts_id AS id,
 	ts_tour_id AS tourId,
+	ts_tourist_num AS touristNum,
 	ts_tourists AS tourists,
 	ts_looks AS looks,
 	ts_coms AS coms,
@@ -111,5 +114,47 @@
 			#{id}
 		</foreach>
 	</select>
+
+	<select id="getTourVisitors" resultType="tourVisitor" parameterType="String">
+		SELECT ui.user_id AS userId, ui.user_name AS userName, ui.user_image AS userImage, ui.user_signature AS userSig,
+		tv.tv_visit_time AS visitTime
+		FROM tour_visitor tv INNER JOIN user_info ui ON ui.user_id = tv.tv_user_id
+		WHERE tv.tv_tour_id = #{tourId} ORDER BY tv.tv_visit_time DESC LIMIT 5;
+	</select>
+
+	<insert id="insertVisitor" parameterType="tourVisitMark">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			select replace(uuid(),'-','') from dual
+		</selectKey>
+		INSERT INTO tour_visitor
+		(tv_id,
+		tv_user_id,
+		tv_visit_time,
+			tv_tour_id
+		)
+		VALUES
+		(#{id},
+		#{userId},
+		#{visitTime},
+		#{tourId}
+		);
+	</insert>
+
+	<select id="checkVisitor" parameterType="tourVisitMark" resultType="String">
+		SELECT 	tv_id
+		FROM
+		tour_visitor
+		WHERE
+		tv_user_id = #{userId} AND tv_tour_id = #{tourId};
+	</select>
+
+	<update id="updateVisitor" parameterType="tourVisitMark">
+	UPDATE tour_visitor
+	SET
+	tv_visit_time = #{visitTime}
+	WHERE
+	tv_user_id = #{userId} AND
+	tv_tour_id = #{tourId} ;
+	</update>
 
 </mapper>

@@ -3,6 +3,7 @@ package com.chenx.gateway.web.portal;
 import com.alibaba.fastjson.JSON;
 import com.chenx.gateway.commons.BasicController;
 import com.chenx.gateway.web.portal.dto.TourQuery;
+import com.chenx.gateway.web.portal.dto.TourRecent;
 import com.chenx.model.Tour;
 import com.chenx.model.dto.TourDetail;
 import com.chenx.model.dto.TourSimple;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.ws.rs.Path;
 import java.util.List;
 
 /**
@@ -34,5 +36,8 @@ public class TourController extends BasicController {
         return tourService.getTourPage(pageNo, pageSize, tourQuery);
     }
 
-
+    @RequestMapping(value = "recent/{tourId}", method = RequestMethod.GET)
+    public TourRecent getTourRecent(@PathVariable String tourId){
+        return tourService.getTourRecent(tourId);
+    }
 }

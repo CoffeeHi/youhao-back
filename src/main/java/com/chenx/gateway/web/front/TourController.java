@@ -80,7 +80,8 @@ public class TourController extends BasicController {
 
     @RequestMapping(value = "{tourId}", method = RequestMethod.GET)
     public TourDetail get(@PathVariable String tourId){
-        return tourService.getTour(tourId);
+        String visitUserId = redisService.getSessionUserId(request.getRequestedSessionId());
+        return tourService.getTour(tourId, visitUserId);
     }
 
     @RequestMapping(value = "{tourId}/role/{role}", method = RequestMethod.POST)
@@ -106,4 +107,5 @@ public class TourController extends BasicController {
         String userId = redisService.getSessionUserId(request.getRequestedSessionId());
         return tourService.exitTour(tourId, userId);
     }
+
 }

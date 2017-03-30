@@ -1,7 +1,9 @@
 package com.chenx.service.front.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.chenx.YouHaoConstant;
 import com.chenx.gateway.web.portal.dto.TourQuery;
+import com.chenx.gateway.web.portal.dto.TourRecent;
 import com.chenx.model.Tour;
 import com.chenx.model.TourState;
 import com.chenx.model.TourUserState;
@@ -26,6 +28,7 @@ import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -56,6 +59,7 @@ public class TourServiceImpl implements ITourService {
         mongo.save(tour);
         //记录旅单状态
         TourState ts = new TourState();
+        ts.setTouristNum(tour.getTouristNum());
         ts.setTourId(tourId);
         sqlSessionTemplate.insert("tour.initTourState", ts);
         //记录用户状态
@@ -70,7 +74,7 @@ public class TourServiceImpl implements ITourService {
     }
 
     @Override
-    public TourDetail getTour(String tourId) {
+    public TourDetail getTour(String tourId, String visitUserId) {
         Tour tour = mongo.findById(tourId, Tour.class);
         if (StringUtils.isEmpty(tour)){
             throw new BasicRuntimeException("该旅单不存在");
@@ -85,6 +89,17 @@ public class TourServiceImpl implements ITourService {
         tourDetail.setAuthorImage(userInfo.getImage());
         tourDetail.setAuthorName(userInfo.getName());
         tourDetail.setAuthorIntro(userInfo.getIntro());
+
+        //记录用户浏览记录
+        TourVisitMark tourVisitMark = new TourVisitMark(visitUserId, new Date(), tourId);
+        //检测是否已浏览过
+        String tvId = sqlSessionTemplate.selectOne("tour.checkVisitor", tourVisitMark);
+        if(!StringUtils.isEmpty(tvId)){
+            sqlSessionTemplate.update("tour.updateVisitor", tourVisitMark); //已浏览则更新时间
+        }else{
+            sqlSessionTemplate.insert("tour.insertVisitor", tourVisitMark); //未浏览则插入记录
+        }
+
         return tourDetail;
     }
 
@@ -169,5 +184,23 @@ public class TourServiceImpl implements ITourService {
             page.setTotalSize(0);
         }
         return page;
+    }
+
+    @Override
+    public TourRecent getTourRecent(String tourId) {
+        List<Tour> tourList = mongo.find(new Query().limit(4).with(new Sort(new Sort.Order(Sort.Direction.DESC, "postTime"))), Tour.class);
+        List<TourRecentPost> trps = new ArrayList<>();
+        for (Tour t : tourList){
+            TourRecentPost trp = new TourRecentPost();
+            BeanUtils.copyProperties(t, trp);
+            trps.add(trp);
+        }
+
+        List<TourVisitor> tvs = sqlSessionTemplate.selectList("tour.getTourVisitors", tourId);
+
+        TourRecent tr = new TourRecent();
+        tr.setTourVisitors(tvs);
+        tr.setTourRecentPosts(trps);
+        return tr;
     }
 }

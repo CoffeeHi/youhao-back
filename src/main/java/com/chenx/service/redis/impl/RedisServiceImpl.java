@@ -6,19 +6,24 @@ import com.chenx.gateway.commons.CommonErrCode;
 import com.chenx.service.redis.IRedisService;
 import com.chenx.utils.MapUtils;
 import com.chenx.utils.dto.SessionInfo;
+import com.fjhb.commons.dao.page.Page;
 import com.fjhb.commons.dao.template.RedisDaoTemplate;
 import com.fjhb.commons.dao.util.BeanUtils;
 import com.fjhb.commons.exception.BasicRuntimeException;
 import com.fjhb.commons.exception.ErrCodeConstant;
 import com.fjhb.commons.util.BeanUtil;
 import lombok.extern.log4j.Log4j;
+import org.springframework.data.redis.core.BoundListOperations;
 import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import javax.naming.AuthenticationException;
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -71,5 +76,23 @@ public class RedisServiceImpl implements IRedisService {
         SessionInfo sessionInfo = JSON.parseObject((String) keyValueOperations.get(), SessionInfo.class);
         return sessionInfo;
     }
+
+    @Override
+    public void addList(String key, String item) {
+        BoundListOperations<Serializable, Serializable> boundListOps = redisDaoTemplate.getRedisTemplate().boundListOps(key);
+        try {
+            boundListOps.leftPush(item.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public List<String> getList(String key, int pageNo, int pageSize) {
+        Page listValuePage = redisDaoTemplate.findListValueByPage(key, pageNo, pageSize);
+        return (List<String>) listValuePage.getCurrentPageData();
+    }
+
+
 
 }

@@ -18,6 +18,9 @@ public class TourState implements Serializable {
     /*旅单id*/
     private String tourId;
 
+    /*旅单规定游客数量*/
+    private int touristNum;
+
     /*当前旅单游客数量*/
     private int tourists;
 
